@@ -23,6 +23,27 @@ Classe: Aula_02B
   Hello Word!
   Hello word!
 
+
+Classe: Aula_02C
+-------------------------------
+- Objetivo: Imprimir uma mensagem com quebra de linha no console.
+- O que faz:
+  - Imprime "Leonardo Ramos" na primeira linha e "dos Santos" na linha seguinte.
+  
+  Saída:
+  Leonardo Ramos 
+  dos Santos
+
+
+Classe: Aula_02D
+-------------------------------
+- Objetivo: Imprimir a idade de uma pessoa no console.
+- O que faz:
+  - Usa `printf` para formatar a saída, mostrando o nome e a idade.
+  
+  Saída:
+  Leonardo Ramos dos Santos tem: 20 anos de idade!
+
 ===============================
           Fim
 ===============================
