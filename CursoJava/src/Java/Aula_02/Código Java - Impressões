@@ -1,0 +1,28 @@
+===============================
+          Aula 02
+===============================
+
+Classe: Aula_02A
+-------------------------------
+- Objetivo: Imprimir "Hello World!" no console.
+- O que faz:
+  - Imprime "Hello World!" duas vezes na mesma linha.
+  
+  Saída:
+  Hello World!Hello World!
+
+
+Classe: Aula_02B
+-------------------------------
+- Objetivo: Imprimir mensagens no console.
+- O que faz:
+  - Imprime "Hello Word!" na primeira linha.
+  - Imprime "Hello word!" na linha seguinte.
+  
+  Saída:
+  Hello Word!
+  Hello word!
+
+===============================
+          Fim
+===============================
