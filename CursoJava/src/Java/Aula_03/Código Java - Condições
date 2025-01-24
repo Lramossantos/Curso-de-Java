@@ -1,0 +1,70 @@
+===============================
+          Aula 03
+===============================
+
+Classe: Aula_03A
+-------------------------------
+- Objetivo: Introduzir comandos de decisão em Java (IF).
+- O que faz:
+  - Verifica se a nota é maior ou igual a 60. Se sim, imprime "Aprovado!".
+  
+  Saída:
+  Aprovado!
+  Fim do programa
+
+
+Classe: Aula_03B
+-------------------------------
+- Objetivo: Usar comandos de decisão com IF..ELSE.
+- O que faz:
+  - Verifica se a nota é maior ou igual à média. Imprime "Aprovado" ou "Reprovado".
+  
+  Saída:
+  Aprovado
+  Fim do Programa
+
+
+Classe: Aula_03C
+-------------------------------
+- Objetivo: Introduzir a estrutura IF com múltiplas condições.
+- O que faz:
+  - Verifica a nota e imprime "Aprovado", "Recuperação" ou "Reprovado" com base nas condições.
+  
+  Saída:
+  Recuperação
+  Fim do Programa
+
+
+Classe: Aula_03D
+-------------------------------
+- Objetivo: Usar operadores lógicos (AND, OR) em decisões.
+- O que faz:
+  - Verifica se a nota e as faltas estão dentro dos limites para aprovar o aluno.
+  
+  Saída:
+  Reprovado
+  Fim do Programa
+
+
+Classe: Aula_03E
+-------------------------------
+- Objetivo: Usar o operador ternário para decisões.
+- O que faz:
+  - Atribui um valor à variável `res` com base na condição da nota e imprime "Aprovado" ou "Reprovado".
+  
+  Saída:
+  Resultado: Aprovado
+
+
+Classe: Aula_03F
+-------------------------------
+- Objetivo: Usar o comando SWITCH para múltiplas condições.
+- O que faz:
+  - Verifica a posição do aluno e imprime a mensagem correspondente.
+  
+  Saída:
+  Premio de Participação
+
+===============================
+          Fim
+===============================
