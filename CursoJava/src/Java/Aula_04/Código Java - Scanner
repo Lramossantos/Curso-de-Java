@@ -1,0 +1,58 @@
+===============================
+          Aula 04
+===============================
+
+Classe: Aula_04A
+-------------------------------
+- Objetivo: Obter dados do teclado usando a classe Scanner.
+- O que faz:
+  - Solicita ao usuário que digite dois números inteiros e calcula a soma.
+  
+  Saída:
+  Digite um número: [usuário insere 5]
+  Digite um número: [usuário insere 10]
+  Soma: 15
+
+
+Classe: Aula_04B
+-------------------------------
+- Objetivo: Obter dados do teclado e formatar a saída.
+- O que faz:
+  - Solicita ao usuário que digite dois números inteiros e exibe a soma usando printf.
+  
+  Saída:
+  Digite um numeral: [usuário insere 7]
+  Digite outro numeral: [usuário insere 3]
+  Soma de 7 mais 3 é igual a 10
+
+
+Classe: Aula_04C
+-------------------------------
+- Objetivo: Obter dados do teclado e incluir o nome do usuário na saída.
+- O que faz:
+  - Solicita que o usuário digite seu nome e dois números, e exibe a soma com o nome.
+  
+  Saída:
+  Digite seu nome: [usuário insere João]
+  Digite um numeral: [usuário insere 4]
+  Digite outro numeral: [usuário insere 6]
+  João a soma de 4 mais 6 é igual a 10
+
+
+Classe: Aula_04D
+-------------------------------
+- Objetivo: Calcular a média de notas e determinar o status do aluno.
+- O que faz:
+  - Solicita o nome do aluno e quatro notas, calcula a média e determina se o aluno está "Aprovado", "Recuperação" ou "Reprovado".
+  
+  Saída:
+  Digite o nome do aluno: [usuário insere Maria]
+  Digite a primeira nota: [usuário insere 5]
+  Digite a segunda nota: [usuário insere 6]
+  Digite a terceira nota: [usuário insere 7]
+  Digite a quarta nota: [usuário insere 8]
+  Nome do Aluno: Maria | Status: Aprovado | Nota: 6.50(pontos) |
+
+===============================
+          Fim
+===============================
