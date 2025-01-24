@@ -44,6 +44,28 @@ Classe: Aula_02D
   Saída:
   Leonardo Ramos dos Santos tem: 20 anos de idade!
 
+
+Classe: Aula_02E
+-------------------------------
+- Objetivo: Mostrar a declaração de várias variáveis numéricas, de texto, lógicas e de caractere.
+- O que faz:
+  - Declara variáveis inteiras usando `int`, `byte`, `short` e `long`.
+  - Declara variáveis de ponto flutuante com `float` e `double`.
+  - Inclui uma variável de texto (`String`), uma variável booleana (`boolean`) e uma variável de caractere (`char`).
+  
+  Saída: (não há saída impressa no console)
+
+
+Classe: Aula_02F
+-------------------------------
+- Objetivo: Demonstrar o uso de variáveis de diferentes tipos e imprimir suas informações formatadas no console.
+- O que faz:
+  - Define variáveis de diferentes tipos: inteiro (`int`), ponto flutuante (`double`), texto (`String`), booleano (`boolean`) e caractere (`char`).
+  - Utiliza `System.out.printf()` para formatar e exibir as variáveis em uma única linha de forma organizada.
+  
+  Saída:
+  Nome: João, Idade: 30, Altura: 1.75, Letra: A, Ativo: true
+
 ===============================
           Fim
 ===============================
