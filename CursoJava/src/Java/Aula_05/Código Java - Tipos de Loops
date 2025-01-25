@@ -1,0 +1,56 @@
+==============================================
+                  AULAS DE JAVA
+==============================================
+
+Aula 05A
+---------
+Nesta aula, trabalhamos com a estrutura de repetição "for". 
+O código inicia um loop que deve iterar enquanto uma variável "i" é menor que 10. 
+Entretanto, a condição está incorreta (i >= 10), o que significa que o loop nunca será executado. 
+Portanto, a mensagem "Leonardo" nunca será impressa.
+
+-----------------------------------------------
+
+Aula 05B
+---------
+Aqui, utilizamos novamente o loop "for". 
+Neste caso, a variável "cont" inicia em 5 e decremente até 1. 
+O loop imprime a mensagem "Digitei isso agora!" cinco vezes, 
+uma vez para cada iteração do loop.
+
+-----------------------------------------------
+
+Aula 05C
+---------
+Nesta aula, o loop "for" itera de 0 até 10, inclusive. 
+Em cada iteração, o programa imprime o valor atual de "i" e uma mensagem informativa. 
+Ao final do loop, é mostrada a mensagem "Fim do Programa".
+
+-----------------------------------------------
+
+Aula 05D
+---------
+Aqui, introduzimos o loop "while". 
+A variável "cont" começa em 0 e o loop continuará enquanto "cont" for menor ou igual a 5. 
+Durante cada iteração, o programa imprime o valor atual de "cont". 
+Assim que "cont" atinge 6, o loop termina.
+
+-----------------------------------------------
+
+Aula 05E
+---------
+Nesta aula, utilizamos o "Scanner" para entrada de dados do usuário. 
+O usuário é solicitado a digitar um número, que é armazenado na variável "max". 
+O loop "while" itera enquanto "n" for menor que "max", 
+imprimindo o valor atual de "n" a cada iteração. 
+
+-----------------------------------------------
+
+Aula 05F
+---------
+Aqui, também usamos o "Scanner" para entrada de dados. 
+O usuário é solicitado a digitar um valor, que será armazenado na variável "valor". 
+O loop "do-while" imprime uma linha e incrementa "valor" em 1. 
+Este loop continua até que "valor" exceda 10.
+
+==============================================
