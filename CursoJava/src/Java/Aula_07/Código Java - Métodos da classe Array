@@ -1,0 +1,63 @@
+===============================
+          Aula 07
+===============================
+
+Classe: Aula_07A
+-------------------------------
+- Objetivo: Demonstrar como percorrer um vetor em Java.
+- O que faz:
+  - Inicializa um vetor de inteiros com valores de 10 a 50.
+  - Utiliza um loop `for` para imprimir cada elemento do vetor.
+  - Utiliza um loop `for-each` para imprimir os elementos novamente.
+  
+  Saída:
+  10 - 20 - 30 - 40 - 50 - 
+  10 - 20 - 30 - 40 - 50 - 
+
+Classe: Aula_07B
+-------------------------------
+- Objetivo: Ordenar um vetor de inteiros e imprimir os valores.
+- O que faz:
+  - Inicializa um vetor de inteiros com valores desordenados.
+  - Utiliza `Arrays.sort()` para ordenar o vetor.
+  - Imprime os elementos do vetor ordenado.
+  
+  Saída:
+  0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 
+
+Classe: Aula_07C
+-------------------------------
+- Objetivo: Preencher um vetor com um valor específico.
+- O que faz:
+  - Inicializa um vetor de inteiros com valores desordenados.
+  - Cria outro vetor de tamanho fixo e preenche todas as posições com o valor 2 usando `Arrays.fill()`.
+  - Imprime os elementos do vetor preenchido.
+  
+  Saída:
+  2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 2 - 
+
+Classe: Aula_07D
+-------------------------------
+- Objetivo: Copiar elementos de um vetor para outro.
+- O que faz:
+  - Inicializa um vetor de inteiros com valores desordenados.
+  - Cria um novo vetor e utiliza `System.arraycopy()` para copiar todos os elementos do vetor original.
+  - Imprime os elementos do vetor copiado.
+  
+  Saída:
+  9 - 2 - 7 - 1 - 8 - 5 - 3 - 4 - 0 - 6 - 
+
+Classe: Aula_07F
+-------------------------------
+- Objetivo: Realizar uma busca binária em um vetor.
+- O que faz:
+  - Inicializa um vetor de inteiros e o ordena.
+  - Utiliza `Arrays.binarySearch()` para verificar se um elemento (3) está presente no vetor.
+  - Imprime se o elemento está no vetor ou não.
+  
+  Saída:
+  O elemento 3 está no array? Sim
+
+===============================
+          Fim
+===============================
