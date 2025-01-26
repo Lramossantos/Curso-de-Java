@@ -1,0 +1,50 @@
+-------------------------------------------------------
+                         Aula 06
+-------------------------------------------------------
+
+1. **Aula_06A**
+   Esta classe demonstra como criar e inicializar um vetor em Java.
+   Um vetor é uma coleção de elementos do mesmo tipo. Aqui, um vetor
+   de inteiros (`num`) com 5 posições é criado e cada posição é
+   preenchida com o valor 10. O código contém comentários que
+   explicam o que está sendo feito, mas a parte de impressão
+   na tela está comentada.
+
+2. **Aula_06B**
+   Nesta classe, um vetor de inteiros chamado `numeros` é declarado
+   e inicializado com valores diretamente: 10, 20, 30, 40 e 50.
+   O programa imprime o valor armazenado na terceira posição do
+   vetor (índice 2), que é 30. Isso mostra como acessar elementos
+   de um vetor.
+
+3. **Aula_06C**
+   Aqui, outro vetor de inteiros é criado e inicializado com
+   valores maiores: 10, 100, 1000, 10000 e 100000. Um loop
+   (estrutura de repetição) é usado para percorrer o vetor e
+   imprimir todos os seus elementos na tela. Essa classe é
+   útil para entender como percorrer um vetor.
+
+4. **Aula_06D**
+   Nesta classe, um vetor é criado com um tamanho fixo de 5.
+   Os elementos do vetor são definidos com valores específicos:
+   10, 5, 3, 2 e 100. Um loop é utilizado novamente para
+   imprimir todos esses valores. Essa classe enfatiza a
+   utilização de um vetor de tamanho fixo e a iteração
+   sobre seus elementos.
+
+5. **Aula_06E**
+   Esta classe é semelhante à Aula_06D, mas o vetor `num`
+   tem 10 elementos, preenchidos com valores variados. O programa
+   utiliza um loop para imprimir todos os 10 elementos na tela.
+   Assim, ela mostra como trabalhar com vetores de diferentes tamanhos.
+
+6. **Aula_06F**
+   Nesta última classe, um programa de avaliação é simulado.
+   Um vetor chamado `gabarito` contém as respostas corretas de um teste.
+   Um segundo vetor, `respostas`, é utilizado para armazenar as
+   respostas do aluno, que são solicitadas através de entradas
+   do usuário. O código compara as respostas do aluno com o
+   gabarito e conta quantas estão corretas, exibindo a nota final.
+   Essa classe combina o uso de vetores com interação do usuário.
+
+-------------------------------------------------------
