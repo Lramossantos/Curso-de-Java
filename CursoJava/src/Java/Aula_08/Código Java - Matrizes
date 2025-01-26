@@ -1,0 +1,47 @@
+===============================
+          Aula 08
+===============================
+
+Classe: Aula_08A
+-------------------------------
+- Objetivo: Demonstrar como trabalhar com matrizes em Java.
+- O que faz:
+  - Inicializa uma matriz de inteiros com 3 linhas e 5 colunas.
+  - Preenche a matriz com números aleatórios de 0 a 100.
+  - Imprime os elementos da matriz, formatados em colunas.
+  
+  Saída:
+  10 | 20 | 30 | 40 | 50 |
+  15 | 25 | 35 | 45 | 55 |
+  20 | 30 | 40 | 50 | 60 |
+
+Classe: Aula_08B
+-------------------------------
+- Objetivo: Utilizar um loop for-each para imprimir uma matriz.
+- O que faz:
+  - Inicializa uma matriz de inteiros com 5 linhas e 4 colunas.
+  - Preenche a matriz com números aleatórios de 0 a 99.
+  - Utiliza um loop for-each para imprimir os elementos da matriz.
+  
+  Saída:
+  |  5 | __ | 10 | __ |  
+  | 15 | __ | 20 | __ |  
+  | 25 | __ | 30 | __ |  
+  | 35 | __ | 40 | __ |  
+  | 45 | __ | 50 | __ |  
+
+Classe: Aula_08C
+-------------------------------
+- Objetivo: Imprimir uma matriz pré-definida.
+- O que faz:
+  - Inicializa uma matriz de inteiros com valores fixos.
+  - Utiliza um loop para imprimir os elementos da matriz formatados.
+  
+  Saída:
+  | 10 | | 20 | | 30 | | 40 |
+  |  1 | |  2 | |  3 | |  4 | |  5 |
+  |100 | |200 | |300 | |400 | |600 |
+
+===============================
+          Fim
+===============================
