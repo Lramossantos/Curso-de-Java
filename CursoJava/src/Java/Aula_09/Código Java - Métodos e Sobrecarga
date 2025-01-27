@@ -1,0 +1,62 @@
+===============================
+          Aula 09
+===============================
+
+Classe: Aula_09A
+-------------------------------
+- Objetivo: Demonstrar um método simples que imprime um nome.
+- O que faz:
+  - Chama o método `canal` que imprime "Leonardo Ramos" no console.
+
+  Saída:
+  Leonardo Ramos
+
+Classe: Aula_09B
+-------------------------------
+- Objetivo: Utilizar um método para imprimir uma mensagem várias vezes.
+- O que faz:
+  - Chama o método `msg` com o nome "Leonardo" e o número 5.
+  - O método imprime o nome 5 vezes.
+
+  Saída:
+  Leonardo
+  Leonardo
+  Leonardo
+  Leonardo
+  Leonardo
+
+Classe: Aula_09C
+-------------------------------
+- Objetivo: Demonstrar a soma de dois números inteiros.
+- O que faz:
+  - Chama o método `soma` com dois inteiros.
+  - Imprime o resultado da soma de 10 e 10, e da soma de 10 e 5.
+
+  Saída:
+  20
+  15
+
+Classe: Aula_09D
+-------------------------------
+- Objetivo: Utilizar um método que aceita um número variável de inteiros.
+- O que faz:
+  - Chama o método `soma` passando vários inteiros.
+  - O método retorna a soma de todos os inteiros fornecidos.
+
+  Saída:
+  (Depende dos valores passados)
+
+Classe: Aula_09E
+-------------------------------
+- Objetivo: Demonstrar a sobrecarga de métodos de soma.
+- O que faz:
+  - Chama o método `soma` com inteiros e com `Double`.
+  - Imprime o resultado das somas.
+
+  Saída:
+  A soma de numeros inteiros foi sobrecarregada e deu o valor de: 10
+  A soma de numeros inteiros foi sobrecarregada e deu o valor de: 5.0
+
+===============================
+          Fim
+===============================
