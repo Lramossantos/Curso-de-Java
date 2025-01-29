@@ -1,0 +1,34 @@
+===============================
+          Aula 10
+===============================
+
+Classe: Aula_10A
+-------------------------------
+- Objetivo: Demonstrar a criação de objetos da classe `Jogador`.
+- O que faz:
+  - Cria três instâncias da classe `Jogador` com identificadores 1, 2 e 3.
+  - Cada instância imprime uma mensagem no console ao ser criada.
+
+  Saída:
+  Jogador numero 1 Criado
+  Jogador numero 2 Criado
+  Jogador numero 3 Criado
+
+Classe: Jogador
+-------------------------------
+- Objetivo: Representar um jogador com um número identificador.
+- O que faz:
+  - O construtor da classe recebe um número inteiro e imprime uma mensagem indicando que um jogador foi criado.
+
+  Código:
+  package Java.Aula_10;
+
+  public class Jogador {
+      public Jogador(int n) {
+          System.out.printf("%nJogador numero %d Criado%n", n);
+      }
+  }
+
+===============================
+          Fim
+===============================

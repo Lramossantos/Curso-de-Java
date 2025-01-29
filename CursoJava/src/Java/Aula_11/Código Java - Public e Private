@@ -1,0 +1,71 @@
+===============================
+          Aula 11
+===============================
+
+Classe: Aula_11A
+-------------------------------
+- Objetivo: Demonstrar a diferença entre atributos públicos e privados.
+- O que faz:
+  - Cria duas instâncias da classe `JogadorA`.
+  - Atributos `num` são atribuídos diretamente, e seus valores são impressos.
+
+  Saída:
+  Jogador 1 foi criado, com sucesso!
+  Jogador 2 foi criado, com sucesso!
+  20
+  10
+
+Classe: JogadorA
+-------------------------------
+- Objetivo: Representar um jogador com um número identificador público.
+- O que faz:
+  - O construtor da classe recebe um número inteiro e imprime uma mensagem confirmando a criação do jogador.
+  - O atributo `num` é público, permitindo acesso direto.
+
+  Código:
+  package Java.Aula_11;
+
+  public class JogadorA {	
+      public int num = 0;	
+	
+      public JogadorA(int num) {
+          this.num = num;
+          System.out.println("Jogador " + num + " foi criado, com sucesso!");
+      }
+  }
+
+Classe: Aula_11B
+-------------------------------
+- Objetivo: Demonstrar o uso de atributos privados na classe `JogadorB`.
+- O que faz:
+  - Cria três instâncias da classe `JogadorB` e imprime uma mensagem ao criar cada jogador.
+
+  Saída:
+  Jogador 1 criado com sucesso!
+  Jogador 2 criado com sucesso!
+  Jogador 3 criado com sucesso!
+
+Classe: JogadorB
+-------------------------------
+- Objetivo: Representar um jogador com atributos privados.
+- O que faz:
+  - O construtor da classe recebe um número inteiro e inicializa o número do jogador e o número de vidas.
+  - O atributo `num` é privado, não podendo ser acessado diretamente fora da classe.
+
+  Código:
+  package Java.Aula_11;
+
+  public class JogadorB {
+      private int num = 0;
+      private int vidas = 0;
+	
+      public JogadorB(int num) {
+          this.num = num;
+          this.vidas = 3;
+          System.out.printf("Jogador %d criado com sucesso! %n", num);
+      }
+  }
+
+===============================
+          Fim
+===============================
