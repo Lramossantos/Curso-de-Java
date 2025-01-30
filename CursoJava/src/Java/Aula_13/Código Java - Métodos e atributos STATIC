@@ -1,0 +1,70 @@
+===============================
+          Aula 13
+===============================
+
+Classe: Aula_13A
+-------------------------------
+- Objetivo: Demonstrar o uso de métodos e atributos estáticos em Java.
+- O que faz:
+  - Define um alerta estático e invoca o método de pontos várias vezes.
+  - Cria três instâncias da classe `Jogador` e exibe suas informações.
+
+  Saída:
+  Jogador 1 criado com sucesso!
+  Jogador 2 criado com sucesso!
+  Jogador 3 criado com sucesso!
+  
+  Número do jogador: 1
+  Vidas: 1
+  Alerta: Sim
+  Jogadores: 3
+  Pontos: 30
+  --------------------------------------
+  
+  Número do jogador: 2
+  Vidas: 1
+  Alerta: Sim
+  Jogadores: 3
+  Pontos: 30
+  --------------------------------------
+  
+  Número do jogador: 3
+  Vidas: 1
+  Alerta: Sim
+  Jogadores: 3
+  Pontos: 30
+  --------------------------------------
+
+Classe: Jogador
+-------------------------------
+- Objetivo: Representar um jogador com atributos e métodos, incluindo atributos estáticos.
+- O que faz:
+  - Inicializa atributos como vida e número do jogador.
+  - Possui métodos para manipular vida, adicionar vida e exibir informações do jogador.
+
+  Código:
+  package Java.Aula_13;
+
+  public class Jogador {
+      private final int maxVidas = 3;
+      private int vida = 0;
+      private int numJogador = 0;
+      private int minVidas;
+      static boolean alerta = false;
+      static int qtdJogadores = 0;
+      static int pontosJogadores = 0;
+
+      public Jogador(int numJogador) {
+          this.vida = 1;
+          this.numJogador = numJogador;
+          System.out.printf("Jogador %d criado com sucesso!%n", numJogador);
+          qtdJogadores++;
+      }
+
+      // Métodos getters, setters, addVida, pontos, info
+      ...
+  }
+
+===============================
+          Fim
+===============================

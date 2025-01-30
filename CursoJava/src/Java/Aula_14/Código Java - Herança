@@ -1,0 +1,75 @@
+===============================
+          Aula 14
+===============================
+
+Classe: Aula_14A
+-------------------------------
+- Objetivo: Demonstrar a herança em Java com as classes `Carro` e `CarroCombate`.
+- O que faz:
+  - Cria instâncias de `Carro` e `CarroCombate`.
+  - Realiza operações como sofrer dano e atirar, e imprime o status dos veículos.
+
+  Saída:
+  Jogador de número 1 criado!
+  Vidas do Jogador 1 são 2 vidas
+  ...
+  (status dos carros exibido)
+
+Classe: Carro
+-------------------------------
+- Objetivo: Representar um carro com atributos e métodos básicos.
+- O que faz:
+  - Inicializa atributos como nome, estado (ligado, destruído) e blindagem.
+  - Possui métodos para sofrer dano e exibir status.
+
+  Código:
+  package Java.Aula_14;
+
+  public class Carro {
+      private String nome;
+      private boolean ligado;
+      private boolean destruido;
+      private int blindagem;
+      private boolean armamento;
+
+      public Carro(String nome) {
+          this.nome = nome;
+          this.ligado = false;
+          this.destruido = false;
+          this.blindagem = 0;
+          this.armamento = false;
+      }
+
+      // Métodos getters e setters, sofrerDano, status
+      ...
+  }
+
+Classe: CarroCombate
+-------------------------------
+- Objetivo: Representar um carro de combate com armamento e atributos específicos.
+- O que faz:
+  - Herda de `Carro` e inicializa atributos relacionados a armamento.
+  - Possui métodos para manipular armamento e atirar.
+
+  Código:
+  package Java.Aula_14;
+
+  public class CarroCombate extends Carro {
+      private final int maxArmamento = 100;
+      private final int minArmamento = 0;
+      private int qtdeArmamento;
+
+      public CarroCombate(String nome, int blindagem) {
+          super(nome);
+          super.setArmamento(true);
+          super.setBlindagem(blindagem);
+          this.qtdeArmamento = 100;		
+      }
+
+      // Métodos getters e setters, atirar, status
+      ...
+  }
+
+===============================
+          Fim
+===============================
