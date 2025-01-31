@@ -1,0 +1,134 @@
+===============================
+          Aula 16
+===============================
+
+Classe: Aula_16A
+-------------------------------
+- Objetivo: Demonstrar o uso do modificador de acesso `protected` em Java, mostrando como ele permite o acesso a atributos e métodos em subclasses.
+- O que faz:
+  - Cria instâncias das classes `Aviao` e `Veiculo`.
+  - Chama o método `info()` para exibir as informações dos veículos.
+  - Modifica o atributo `nome` diretamente na classe `Veiculo` (devido ao uso de `protected`).
+
+  Saída esperada:
+  --------------
+  Nome:........ Jato
+  Tipo:........ 10
+  categoria:... 1
+  --------------
+  Nome:........ Moto
+  Tipo:........ 2
+
+Classe: Veiculo
+-------------------------------
+- Objetivo: Representar um veículo genérico com atributos básicos.
+- O que faz:
+  - Inicializa atributos como `nome` (usando `protected`) e `tipo` (usando `private`).
+  - Possui um método `info()` para exibir os detalhes do veículo.
+
+  Código:
+  package Java.Aula_16;
+
+  public class Veiculo {
+      protected String nome; // Atributo protegido (acessível por subclasses)
+      private int tipo; // Atributo privado (acessível apenas na própria classe)
+
+      public Veiculo(String nome, int tipo) {
+          this.nome = nome;
+          this.tipo = tipo;
+      }
+
+      // Getters e Setters
+      public String getNome() {
+          return nome;
+      }
+
+      public void setNome(String nome) {
+          this.nome = nome;
+      }
+
+      public int getTipo() {
+          return tipo;
+      }
+
+      public void setTipo(int tipo) {
+          this.tipo = tipo;
+      }
+
+      // Método para exibir informações
+      public void info() {
+          System.out.println("--------------");
+          System.out.println("Nome:........ " + this.nome);
+          System.out.println("Tipo:........ " + this.tipo);
+      }
+  }
+
+Classe: Aviao
+-------------------------------
+- Objetivo: Representar um avião, que é um tipo específico de veículo.
+- O que faz:
+  - Herda da classe `Veiculo`.
+  - Adiciona um atributo específico (`categoria`).
+  - Sobrescreve o método `info()` para incluir informações adicionais sobre a categoria.
+  - Usa a palavra-chave `super` para acessar métodos da superclasse.
+
+  Código:
+  package Java.Aula_16;
+
+  public class Aviao extends Veiculo {
+      private int categoria;
+
+      public Aviao(String nome, int categoria) {
+          super(nome, 10); // Chama o construtor da superclasse (Veiculo)
+          this.categoria = categoria;
+      }
+
+      @Override
+      public void info() {
+          super.info(); // Chama o método info() da superclasse
+          System.out.println("categoria:... " + this.categoria);
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. Uso do Modificador `protected`:
+   - O atributo `nome` na classe `Veiculo` é declarado como `protected`, o que permite que ele seja acessado diretamente por subclasses (como `Aviao`) e por outras classes no mesmo pacote.
+   - Isso é útil quando você deseja que um atributo ou método seja acessível apenas para classes relacionadas por herança ou dentro do mesmo pacote.
+
+2. Sobrescrita do Método `info()`:
+   - A classe `Aviao` sobrescreve o método `info()` da superclasse `Veiculo`.
+   - Dentro do método `info()` da subclasse, a linha `super.info();` chama o método `info()` da superclasse, que exibe o nome e o tipo do veículo.
+   - Em seguida, a subclasse adiciona a exibição da categoria.
+
+3. Acesso Direto ao Atributo `nome`:
+   - Na classe `Aula_16A`, o atributo `nome` da instância `v1` (da classe `Veiculo`) é modificado diretamente (`v1.nome = "Moto";`), pois ele é `protected` e está no mesmo pacote.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando o método `main` da classe `Aula_16A` é executado, a saída será:
+
+--------------
+Nome:........ Jato
+Tipo:........ 10
+categoria:... 1
+--------------
+Nome:........ Moto
+Tipo:........ 2
+
+===============================
+          Resumo
+===============================
+
+- Modificador `protected`: Permite o acesso a atributos e métodos por subclasses e classes no mesmo pacote.
+- Herança: A classe `Aviao` herda da classe `Veiculo` e adiciona funcionalidades específicas.
+- Sobrescrita de Métodos: A subclasse pode sobrescrever métodos da superclasse para adicionar ou modificar comportamentos.
+- Reutilização de Código: A herança e o uso de `protected` facilitam a reutilização de atributos e métodos.
+
+===============================
+          Fim
+===============================
