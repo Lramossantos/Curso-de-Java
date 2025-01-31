@@ -22,8 +22,7 @@ public class Aula_11A {
 		j2.num = 10;
 		
 		System.out.println(j1.num);
-		System.out.println(j2.num);
-		
+		System.out.println(j2.num);		
 		
 	}
 

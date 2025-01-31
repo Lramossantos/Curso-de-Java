@@ -1,0 +1,138 @@
+===============================
+          Aula 15
+===============================
+
+Classe: Aula_15A
+-------------------------------
+- Objetivo: Demonstrar o uso da palavra-chave `super` em Java, mostrando a relação entre superclasse (`Veiculo`) e subclasse (`Aviao`).
+- O que faz:
+  - Cria uma instância da classe `Aviao`.
+  - Chama o método `info()` para exibir as informações do veículo.
+
+  Saída esperada:
+  -------------------------
+  Nome----------: Aviador
+  Tipo----------: 10
+  Categoria-----: 3
+
+Classe: Veiculo
+-------------------------------
+- Objetivo: Representar um veículo genérico com atributos básicos.
+- O que faz:
+  - Inicializa atributos como `nome` e `tipo`.
+  - Possui um método `info()` para exibir os detalhes do veículo.
+
+  Código:
+  package Java.Aula_15;
+
+  public class Veiculo {
+      private String nome;
+      private int tipo;
+
+      public Veiculo(String nome, int tipo) {
+          this.nome = nome;
+          this.tipo = tipo;
+      }
+
+      public void info() {
+          System.out.println("-------------------------");
+          System.out.printf("Nome----------: %s %n", this.nome);
+          System.out.printf("Tipo----------: %d %n", this.tipo);
+      }
+
+      // Getters e Setters
+      public String getNome() {
+          return nome;
+      }
+
+      public void setNome(String nome) {
+          this.nome = nome;
+      }
+
+      public int getTipo() {
+          return tipo;
+      }
+
+      public void setTipo(int tipo) {
+          this.tipo = tipo;
+      }
+  }
+
+Classe: Aviao
+-------------------------------
+- Objetivo: Representar um avião, que é um tipo específico de veículo.
+- O que faz:
+  - Herda da classe `Veiculo`.
+  - Adiciona um atributo específico (`categoria`).
+  - Sobrescreve o método `info()` para incluir informações adicionais sobre a categoria.
+  - Usa a palavra-chave `super` para acessar métodos e atributos da superclasse.
+
+  Código:
+  package Java.Aula_15;
+
+  public class Aviao extends Veiculo {
+      private int categoria;
+
+      public Aviao(String nome, int categoria) {
+          super(nome, 10); // Chama o construtor da superclasse (Veiculo)
+          this.categoria = categoria;
+      }
+
+      @Override
+      public void info() {
+          super.info(); // Chama o método info() da superclasse
+          System.out.printf("Categoria-----: %d %n", this.categoria);
+      }
+
+      // Getters e Setters
+      public int getCategoria() {
+          return categoria;
+      }
+
+      public void setCategoria(int categoria) {
+          this.categoria = categoria;
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. Uso do `super` no Construtor:
+   - No construtor da classe `Aviao`, a linha `super(nome, 10);` chama o construtor da superclasse (`Veiculo`), passando os parâmetros `nome` e `tipo` (neste caso, o tipo é fixo como `10`).
+   - Isso garante que os atributos da superclasse sejam inicializados corretamente antes de inicializar os atributos específicos da subclasse.
+
+2. Sobrescrita do Método `info()`:
+   - A classe `Aviao` sobrescreve o método `info()` da superclasse `Veiculo`.
+   - Dentro do método `info()` da subclasse, a linha `super.info();` chama o método `info()` da superclasse, que exibe o nome e o tipo do veículo.
+   - Em seguida, a subclasse adiciona a exibição da categoria.
+
+3. Herança e Reutilização de Código:
+   - A classe `Aviao` herda os atributos e métodos da classe `Veiculo`, evitando a duplicação de código.
+   - A palavra-chave `super` é usada para acessar e reutilizar funcionalidades da superclasse.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando o método `main` da classe `Aula_15A` é executado, a saída será:
+
+-------------------------
+Nome----------: Aviador
+Tipo----------: 10
+Categoria-----: 3
+
+===============================
+          Resumo
+===============================
+
+- Herança: A classe `Aviao` herda da classe `Veiculo`.
+- Uso do `super`:
+  - Para chamar o construtor da superclasse.
+  - Para acessar métodos da superclasse (como `info()`).
+- Sobrescrita de Métodos: A subclasse pode sobrescrever métodos da superclasse para adicionar ou modificar comportamentos.
+- Reutilização de Código: A herança permite reutilizar atributos e métodos da superclasse, evitando duplicação.
+
+===============================
+          Fim
+===============================

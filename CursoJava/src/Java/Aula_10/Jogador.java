@@ -8,7 +8,7 @@ package Java.Aula_10;
  */
 public class Jogador {
 
-	private int vidas;
+	protected int vidas;
 	private int num;
 
 	public Jogador(int num) {
