@@ -1,0 +1,135 @@
+===============================
+          Aula 17
+===============================
+
+Classe: Aula_17A
+-------------------------------
+- Objetivo: Denominar a aula e indicar que o projeto da calculadora começará na próxima classe.
+- O que faz:
+  - Imprime uma mensagem simples no console.
+
+  Código:
+  package Java.Aula_17;
+
+  public class Aula_17A {
+      public static void main(String[] args) {
+          System.out.println("Essa classe é somente para denominar a aula, o projeto calculadora começará na próxima classe!!!");
+      }
+  }
+
+Classe: Calculadora
+-------------------------------
+- Objetivo: Implementar uma calculadora simples que realiza a soma de dois números.
+- O que faz:
+  - Interage com o usuário para coletar dois valores.
+  - Usa a classe `Numero` para armazenar os valores e o resultado.
+  - Realiza a soma e exibe o resultado.
+  - Permite que o usuário continue somando valores enquanto desejar.
+
+  Código:
+  package Java.Aula_17;
+
+  import java.util.Scanner;
+
+  public class Calculadora {
+      public static void main(String[] args) {
+          Scanner input = new Scanner(System.in);
+          Numero n1 = new Numero();
+          Numero n2 = new Numero();
+          Numero res = new Numero();
+          String opcao = "S";
+
+          while (opcao.equals("S") || opcao.equals("s")) {
+              System.out.printf("Digite o valor 1: ");
+              n1.setValor(input.nextInt());
+
+              System.out.printf("%nDigite o valor 2: ");
+              n2.setValor(input.nextInt());
+
+              res.setValor(n1.getValor() + n2.getValor());
+              System.out.printf("%d + %d = %d%n%n", n1.getValor(), n2.getValor(), res.getValor());
+
+              System.out.println("Deseja somar outro valor?: ");
+              opcao = input.next();
+          }
+      }
+  }
+
+Classe: Numero
+-------------------------------
+- Objetivo: Representar um número com um valor inteiro.
+- O que faz:
+  - Encapsula um valor inteiro.
+  - Inicializa o valor como 0 no construtor.
+  - Fornece métodos `getValor` e `setValor` para acessar e modificar o valor.
+
+  Código:
+  package Java.Aula_17;
+
+  public class Numero {
+      private int valor;
+
+      public Numero() {
+          this.valor = 0;
+      }
+
+      public int getValor() {
+          return valor;
+      }
+
+      public void setValor(int valor) {
+          this.valor = valor;
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Classe Aula_17A**:
+   - Serve apenas para indicar que o projeto da calculadora começará na próxima classe.
+   - Imprime uma mensagem simples no console.
+
+2. **Classe Calculadora**:
+   - Interage com o usuário para coletar dois valores.
+   - Usa a classe `Numero` para armazenar os valores e o resultado.
+   - Realiza a soma e exibe o resultado.
+   - Permite que o usuário continue somando valores enquanto desejar.
+
+3. **Classe Numero**:
+   - Encapsula um valor inteiro.
+   - Inicializa o valor como 0 no construtor.
+   - Fornece métodos `getValor` e `setValor` para acessar e modificar o valor.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando o método `main` da classe `Calculadora` é executado, a saída será algo como:
+
+--------------
+Digite o valor 1: 5
+
+Digite o valor 2: 3
+5 + 3 = 8
+
+Deseja somar outro valor?: S
+Digite o valor 1: 10
+
+Digite o valor 2: 20
+10 + 20 = 30
+
+Deseja somar outro valor?: N
+--------------
+
+===============================
+          Resumo
+===============================
+
+- **Encapsulamento**: A classe `Numero` encapsula o valor inteiro.
+- **Interação com o Usuário**: A classe `Calculadora` coleta valores e exibe resultados.
+- **Reutilização de Código**: A classe `Numero` pode ser usada em outros projetos.
+
+===============================
+          Fim
+===============================
