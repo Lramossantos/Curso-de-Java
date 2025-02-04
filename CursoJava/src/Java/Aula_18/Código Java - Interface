@@ -1,0 +1,89 @@
+===============================
+          Aula 18
+===============================
+
+Classe: Aula_18A
+-------------------------------
+- Objetivo: Demonstrar o uso de uma interface (SerVivo) e a implementação de métodos em uma classe (Animal).
+- O que faz:
+  - Cria uma instância da classe Animal.
+  - Chama o método info() para exibir informações.
+
+  Saída esperada:
+  --------------
+  (A saída será definida pela implementação do método info() na classe Animal.)
+
+Classe: Animal
+-------------------------------
+- Objetivo: Representar um animal que implementa a interface SerVivo.
+- O que faz:
+  - Implementa os métodos mover(), comer(int massa) e info() da interface SerVivo.
+  - Define um atributo vivo para indicar o estado de vida do animal.
+
+  Código:
+  package Java.Aula_18;
+
+  public class Animal implements SerVivo {    
+      public boolean vivo = true;
+
+      public Animal() {
+      }
+
+      @Override
+      public void mover() {
+          // TODO Auto-generated method stub
+      }
+
+      @Override
+      public void comer(int massa) {
+          // TODO Auto-generated method stub
+      }
+
+      @Override
+      public void info() {
+          System.out.printf("");
+      }
+  }
+
+Interface: SerVivo
+-------------------------------
+- Objetivo: Definir um contrato para seres vivos, com métodos que devem ser implementados.
+- O que faz:
+  - Declara os métodos mover(), comer(int massa) e info().
+
+  Código:
+  package Java.Aula_18;
+
+  public interface SerVivo {
+      public void mover();
+      public void comer(int massa);
+      public void info();
+  }
+
+===============================
+          Explicação
+===============================
+
+1. Classe Aula_18A:
+   - Cria uma instância da classe Animal e chama o método info().
+   - Serve como ponto de entrada para o programa.
+
+2. Classe Animal:
+   - Implementa a interface SerVivo, fornecendo implementações para os métodos mover(), comer(int massa) e info().
+   - O método info() está vazio no exemplo, mas pode ser preenchido para exibir informações sobre o animal.
+
+3. Interface SerVivo:
+   - Define um contrato que a classe Animal deve seguir.
+   - Garante que todas as classes que implementam SerVivo tenham os métodos mover(), comer(int massa) e info().
+
+===============================
+          Resumo
+===============================
+
+- Interface: SerVivo define um contrato com métodos que devem ser implementados.
+- Implementação: A classe Animal implementa a interface SerVivo, fornecendo comportamentos para os métodos definidos.
+- Reutilização de Código: A interface permite que outras classes (como Animal) implementem comportamentos comuns.
+
+===============================
+          Fim
+===============================
