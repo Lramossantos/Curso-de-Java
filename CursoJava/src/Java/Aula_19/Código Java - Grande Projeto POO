@@ -1,0 +1,337 @@
+===============================
+          Aula 19
+===============================
+
+Classe: Aula_19A
+-------------------------------
+- Objetivo: Demonstrar a interação entre animais (Sapo, Aranha, Formiga) e vegetais em um ecossistema simulado.
+- O que faz:
+  - Cria instâncias de `Sapo`, `Aranha`, `Formiga` e `Vegetal`.
+  - Realiza operações como ataque, alimentação e exibição de informações.
+  - Mostra o estado dos animais após cada ação.
+
+  Saída esperada:
+  --------------
+  Tipo......: Aranha
+  Vivo......: Sim
+  Massa.....: 5
+  Velocidade: 5
+  força.....: 5
+  --------------
+  Tipo......: Aranha
+  Vivo......: Sim
+  Massa.....: 5
+  Velocidade: 5
+  força.....: 7
+  --------------
+  Tipo......: Aranha
+  Vivo......: Sim
+  Massa.....: 5
+  Velocidade: 5
+  força.....: 9
+
+Classe: Animal (Classe Abstrata)
+-------------------------------
+- Objetivo: Representar um animal genérico com atributos básicos como massa, velocidade, força e estado de vida.
+- O que faz:
+  - Define atributos como `vivo`, `massa`, `x`, `y`, `velocidade` e `forca`.
+  - Implementa métodos como `mover()`, `comer()`, `info()` e `atacar()`.
+  - Verifica se o animal está vivo antes de realizar ações.
+
+  Código:
+  package Java.Aula_19;
+
+  abstract class Animal {
+      private Boolean vivo;
+      private int massa;
+      private int x;
+      private int y;
+      private int velocidade;
+      private int forca;
+
+      public Animal(int velocidade, int massa, int forca) {
+          this.vivo = true;
+          this.massa = massa;
+          this.x = 0;
+          this.y = 0;
+          this.forca = forca;
+          this.velocidade = velocidade;
+      }
+
+      public Boolean getVivo() {
+          return vivo;
+      }
+
+      public void setVivo(Boolean vivo) {
+          this.vivo = vivo;
+      }
+
+      public int getMassa() {
+          return massa;
+      }
+
+      public void setMassa(int massa) {
+          this.massa = massa;
+      }
+
+      public int getX() {
+          return x;
+      }
+
+      public void setX(int x) {
+          this.x = x;
+      }
+
+      public int getY() {
+          return y;
+      }
+
+      public void setY(int y) {
+          this.y = y;
+      }
+
+      public int getVelocidade() {
+          return velocidade;
+      }
+
+      public void setVelocidade(int velocidade) {
+          this.velocidade = velocidade;
+      }
+
+      public int getForca() {
+          return forca;
+      }
+
+      public void setForca(int forca) {
+          this.forca = forca;
+      }
+
+      public void mover() {
+          if (this.vivo == true) {
+              this.x = this.x + this.velocidade;
+              this.y = this.y + this.velocidade;
+          } else {
+              System.out.println("------------");
+              System.out.println(this.getClass().getSimpleName() + " está morto, não pode mover");
+              System.out.println("------------");
+          }
+      }
+
+      public void comer(int massa) {
+          if (this.vivo == true) {
+              this.forca = this.forca + massa;
+          } else {
+              System.out.println("------------");
+              System.out.println(this.getClass().getSimpleName() + " está morto, não pode comer");
+              System.out.println("------------");
+          }
+      }
+
+      public void info() {
+          System.out.printf("Tipo......:%s %n", this.getClass().getSimpleName());
+          System.out.printf("Vivo......:%s %n", this.getVivo() ? "Sim" : "Não");
+          System.out.printf("Massa.....:%d %n", this.massa);
+          System.out.printf("Velocidade:%d %n", this.velocidade);
+          System.out.printf("força.....:%d %n", this.forca);
+          System.out.println("---------------");
+      }
+
+      public void atacar(Animal a) {
+          if (this.vivo == true) {
+              if (this.forca > a.forca) {
+                  this.forca = this.forca + a.massa;
+                  a.vivo = false;
+              } else {
+                  this.vivo = false;
+              }
+          } else {
+              System.out.println("------------");
+              System.out.println(this.getClass().getSimpleName() + " está morto, não pode atacar");
+              System.out.println("------------");
+          }
+      }
+  }
+
+Classe: Sapo
+-------------------------------
+- Objetivo: Representar um sapo, que é um tipo específico de animal.
+- O que faz:
+  - Herda da classe `Animal`.
+  - Inicializa os atributos do sapo através do construtor.
+
+  Código:
+  package Java.Aula_19;
+
+  public class Sapo extends Animal {
+      public Sapo(int velocidade, int massa, int forca) {
+          super(velocidade, massa, forca);
+      }
+  }
+
+Classe: Formiga
+-------------------------------
+- Objetivo: Representar uma formiga, que é um tipo específico de animal.
+- O que faz:
+  - Herda da classe `Animal`.
+  - Inicializa os atributos da formiga através do construtor.
+
+  Código:
+  package Java.Aula_19;
+
+  public class Formiga extends Animal {
+      public Formiga(int velocidade, int massa, int forca) {
+          super(velocidade, massa, forca);
+      }
+  }
+
+Classe: Aranha
+-------------------------------
+- Objetivo: Representar uma aranha, que é um tipo específico de animal com veneno.
+- O que faz:
+  - Herda da classe `Animal`.
+  - Adiciona um atributo específico (`veneno`).
+  - Sobrescreve o método `atacar()` para incluir o efeito do veneno.
+
+  Código:
+  package Java.Aula_19;
+
+  public class Aranha extends Animal {
+      private int veneno;
+
+      public Aranha(int velocidade, int massa, int forca, int veneno) {
+          super(velocidade, massa, forca);
+          this.veneno = veneno;
+      }
+
+      public void atacar(Animal a) {
+          if (this.getVivo() == true) {
+              if (this.getForca() <= a.getForca()) {
+                  this.setForca(getForca() + a.getMassa());
+              }
+
+              if ((this.getForca() + getVeneno()) > a.getForca()) {
+                  this.setMassa(this.getMassa() + a.getMassa());
+                  a.setVivo(false);
+              } else {
+                  setVivo(false);
+              }
+          } else {
+              System.out.println("---------------------------");
+              System.out.println(getClass().toGenericString() + " está morto, impossivel atacar!");
+              System.out.println("---------------------------");
+          }
+      }
+
+      public int getVeneno() {
+          return veneno;
+      }
+
+      public void setVeneno(int veneno) {
+          this.veneno = veneno;
+      }
+  }
+
+Classe: Vegetal
+-------------------------------
+- Objetivo: Representar um vegetal com massa e estado de vida.
+- O que faz:
+  - Define atributos como `vivo` e `massa`.
+  - Implementa métodos como `info()` para exibir informações.
+
+  Código:
+  package Java.Aula_19;
+
+  public class Vegetal {
+      private Boolean vivo;
+      private int massa;
+
+      public Vegetal(int massa) {
+          this.vivo = true;
+          this.massa = massa;
+      }
+
+      public Boolean getVivo() {
+          return vivo;
+      }
+
+      public void setVivo(Boolean vivo) {
+          this.vivo = vivo;
+      }
+
+      public int getMassa() {
+          return massa;
+      }
+
+      public void setMassa(int massa) {
+          this.massa = massa;
+      }
+
+      public void info() {
+          System.out.printf("Tipo......:%s %n", getClass().toGenericString());
+          System.out.printf("Vivo......:%s %n", this.vivo ? "Sim" : "Não");
+          System.out.printf("Massa.....:%d %n", this.massa);
+          System.out.println("---------------");
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Classe Animal**:
+   - Classe abstrata que serve como base para todos os animais.
+   - Define métodos comuns como `mover()`, `comer()`, `atacar()` e `info()`.
+   - Verifica se o animal está vivo antes de realizar ações.
+
+2. **Classe Sapo**:
+   - Herda de `Animal` e inicializa os atributos específicos do sapo.
+
+3. **Classe Formiga**:
+   - Herda de `Animal` e inicializa os atributos específicos da formiga.
+
+4. **Classe Aranha**:
+   - Herda de `Animal` e adiciona o atributo `veneno`.
+   - Sobrescreve o método `atacar()` para incluir o efeito do veneno.
+
+5. **Classe Vegetal**:
+   - Representa um vegetal com massa e estado de vida.
+   - Implementa o método `info()` para exibir informações.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando o método `main` da classe `Aula_19A` é executado, a saída será:
+
+--------------
+Tipo......: Aranha
+Vivo......: Sim
+Massa.....: 5
+Velocidade: 5
+força.....: 5
+--------------
+Tipo......: Aranha
+Vivo......: Sim
+Massa.....: 5
+Velocidade: 5
+força.....: 7
+--------------
+Tipo......: Aranha
+Vivo......: Sim
+Massa.....: 5
+Velocidade: 5
+força.....: 9
+--------------
+
+===============================
+          Resumo
+===============================
+
+- **Herança**: As classes `Sapo`, `Formiga` e `Aranha` herdam da classe `Animal`.
+- **Encapsulamento**: Atributos como `vivo`, `massa` e `forca` são encapsulados.
+- **Polimorfismo**: A classe `Aranha` sobrescreve o método `atacar()` para incluir o efeito do veneno.
+- **Reutilização de Código**: A classe `Animal` fornece métodos comuns que são reutilizados pelas subclasses.
+
+===============================
+          Fim
+===============================
