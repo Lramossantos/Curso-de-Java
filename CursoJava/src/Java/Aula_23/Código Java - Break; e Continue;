@@ -1,0 +1,107 @@
+===============================
+          Aula 23
+===============================
+
+Classe: Aula_23A
+-------------------------------
+- Objetivo: Demonstrar o uso da palavra-chave `break` em Java.
+- O que faz:
+  - Usa um loop `for` para iterar de 1 a 100.
+  - Interrompe o loop quando o valor de `i` atinge 10 usando `break`.
+
+  Código:
+  package Java.Aula_23;
+
+  public class Aula_23A {
+      public static void main(String[] args) {
+          int cont = 100;
+          for (int i = 1; i < cont; i++) {
+              System.out.println(i);
+              if (i >= 10) {
+                  break;
+              }
+          }
+      }
+  }
+
+  Saída esperada:
+  --------------
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  10
+  --------------
+
+Classe: Aula23B
+-------------------------------
+- Objetivo: Demonstrar o uso da palavra-chave `continue` em Java.
+- O que faz:
+  - Usa um loop `for` para iterar de 0 a 99.
+  - Ignora a execução de parte do loop quando `i` está entre 10 e 60 usando `continue`.
+
+  Código:
+  package Java.Aula_23;
+
+  public class Aula23B {
+      public static void main(String[] args) {
+          int cont = 100;
+
+          for (int i = 0; i < 100; i++) {
+              System.out.println(i);
+              if (i >= 10 && i <= 60) {
+                  continue;
+              }
+              System.out.printf("%d - ", i);
+          }
+      }
+  }
+
+  Saída esperada:
+  --------------
+  0
+  0 - 1
+  1 - 2
+  2 - 3
+  3 - 4
+  4 - 5
+  5 - 6
+  6 - 7
+  7 - 8
+  8 - 9
+  9 - 10
+  (O loop continua, mas os valores entre 10 e 60 não exibem o texto após o `continue`)
+  --------------
+
+===============================
+          Explicação
+===============================
+
+1. **Uso do `break`**:
+   - A palavra-chave `break` é usada para interromper a execução de um loop imediatamente.
+   - Na classe `Aula_23A`, o loop é interrompido quando `i` atinge 10.
+
+2. **Uso do `continue`**:
+   - A palavra-chave `continue` é usada para pular a iteração atual de um loop e continuar com a próxima.
+   - Na classe `Aula23B`, o `continue` faz com que o loop ignore a execução de parte do código quando `i` está entre 10 e 60.
+
+3. **Diferença entre `break` e `continue`**:
+   - `break`: Interrompe completamente o loop.
+   - `continue`: Pula apenas a iteração atual, continuando com as próximas.
+
+===============================
+          Resumo
+===============================
+
+- **`break`**: Útil para interromper loops quando uma condição específica é atendida.
+- **`continue`**: Útil para pular iterações específicas de um loop.
+- **Controle de Fluxo**: Ambas as palavras-chave ajudam a controlar o fluxo de execução em loops.
+
+===============================
+          Fim
+===============================

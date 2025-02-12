@@ -1,0 +1,128 @@
+===============================
+          Aula 26
+===============================
+
+Classe: Aula_26A
+-------------------------------
+- Objetivo: Implementar um jogo de perguntas e respostas em Java.
+- O que faz:
+  - Solicita o nome do usuário.
+  - Apresenta 5 perguntas com opções de resposta.
+  - Armazena as respostas do usuário.
+  - Compara as respostas com um gabarito e calcula a nota.
+  - Exibe a nota final e o status (Aprovado ou Reprovado).
+
+  Código:
+  package Java.aula_26;
+
+  import java.util.Scanner;
+
+  public class Aula_26A {
+      public static void main(String[] args) {
+          Scanner input = new Scanner(System.in);
+          int numQuestão = 5;
+          char resp;
+          char respostas[] = new char[numQuestão];
+          double nota = 0, pontoQuestao = 2;
+          String nome = "";
+          Boolean status;
+
+          char[] gabarito = { 'b', 'b', 'b', 'a', 'b' };
+
+          String[] perguntas = {
+              "Qual é o maior planeta do Sistema Solar?",
+              "Quem escreveu a peça (Romeu e Julieta)?",
+              "Qual é a capital da França?",
+              "Quantos lados tem um triângulo?",
+              "Qual é o nome do protagonista do livro (Dom Quixote)?"
+          };
+
+          String[] resposta = {
+              "A) Terra | B) Júpiter | C) Marte",
+              "A) Machado de Assis | B) William Shakespeare | C) Fernando Pessoa",
+              "A) Berlim | B) Paris | C) Roma",
+              "A) 3 | B) 4 | C) 5",
+              "A) Sancho Pança | B) Dom Quixote | C) Dulcineia"
+          };
+
+          System.out.print("Digite seu nome: ");
+          nome = input.nextLine();
+
+          System.out.println(nome + " Agora se prepare para iniciar o jogo de perguntas!");
+
+          for (int i = 0; i < numQuestão; i++) {
+              System.out.println(perguntas[i]);
+              System.out.println(resposta[i]);
+              resp = input.nextLine().charAt(0);
+              System.out.println("");
+              respostas[i] = resp;
+          }
+
+          for (int i = 0; i < numQuestão; i++) {
+              if (gabarito[i] == respostas[i]) {
+                  nota = nota + pontoQuestao;
+              }
+          }
+
+          System.out.printf("%s sua nota foi (%.2f). Você foi, %s", nome, nota, nota > 6 ? "Aprovado" : "Reprovado");
+      }
+  }
+
+  Saída esperada:
+  --------------
+  Digite seu nome: João
+  João Agora se prepare para iniciar o jogo de perguntas!
+  Qual é o maior planeta do Sistema Solar?
+  A) Terra | B) Júpiter | C) Marte
+  b
+
+  Quem escreveu a peça (Romeu e Julieta)?
+  A) Machado de Assis | B) William Shakespeare | C) Fernando Pessoa
+  b
+
+  Qual é a capital da França?
+  A) Berlim | B) Paris | C) Roma
+  b
+
+  Quantos lados tem um triângulo?
+  A) 3 | B) 4 | C) 5
+  a
+
+  Qual é o nome do protagonista do livro (Dom Quixote)?
+  A) Sancho Pança | B) Dom Quixote | C) Dulcineia
+  b
+
+  João sua nota foi (10.00). Você foi, Aprovado
+  --------------
+
+===============================
+          Explicação
+===============================
+
+1. **Funcionamento do Programa**:
+   - O programa começa solicitando o nome do usuário.
+   - Em seguida, exibe 5 perguntas com opções de resposta.
+   - O usuário insere suas respostas, que são armazenadas em um array.
+   - As respostas são comparadas com o gabarito, e a nota é calculada.
+   - A nota final é exibida, junto com o status (Aprovado ou Reprovado).
+
+2. **Estrutura do Código**:
+   - Usa arrays para armazenar perguntas, opções de resposta, gabarito e respostas do usuário.
+   - Utiliza um loop `for` para exibir as perguntas e coletar as respostas.
+   - Outro loop `for` é usado para comparar as respostas com o gabarito e calcular a nota.
+
+3. **Interação com o Usuário**:
+   - O programa é interativo, solicitando entradas do usuário e fornecendo feedback imediato.
+
+===============================
+          Resumo
+===============================
+
+- **Arrays**: Usados para armazenar perguntas, respostas e gabarito.
+- **Interação**: O programa coleta entradas do usuário e exibe resultados.
+- **Lógica de Pontuação**: Compara respostas com o gabarito e calcula a nota final.
+- **Feedback**: Exibe a nota e o status (Aprovado ou Reprovado).
+
+===============================
+          Fim
+===============================

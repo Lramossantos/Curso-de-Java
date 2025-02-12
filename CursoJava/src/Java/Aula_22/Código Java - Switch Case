@@ -1,0 +1,214 @@
+===============================
+          Aula 22
+===============================
+
+Classe: Aula_22A
+-------------------------------
+- Objetivo: Demonstrar o uso de estruturas condicionais `if-else` em Java.
+- O que faz:
+  - Verifica a posição de um competidor e exibe uma mensagem correspondente.
+  - Usa uma série de condições `if-else` para determinar a mensagem.
+
+  Código:
+  package Java.Aula_22;
+
+  public class Aula_22A {
+      public static void main(String[] args) {
+          int posicao = 1;
+
+          if (posicao == 1) {
+              System.out.println("Ficou em primeiro lugar!");
+          } else if (posicao == 2) {
+              System.out.println("Ficou em segundo lugar!");
+          } else if (posicao == 3) {
+              System.out.println("Ficou em terceiro lugar!");
+          } else if (posicao == 4) {
+              System.out.println("Ficou em quarto lugar!");
+          } else {
+              System.out.println("Perdeu!");
+          }
+      }
+  }
+
+  Saída esperada:
+  --------------
+  Ficou em primeiro lugar!
+  --------------
+
+Classe: Aula_22B
+-------------------------------
+- Objetivo: Demonstrar o uso da estrutura `switch-case` em Java.
+- O que faz:
+  - Verifica a posição de um competidor e exibe uma mensagem correspondente.
+  - Usa a estrutura `switch-case` para determinar a mensagem.
+
+  Código:
+  package Java.Aula_22;
+
+  public class Aula_22B {
+      public static void main(String[] args) {
+          int posicao = 1;
+
+          switch (posicao) {
+              case 1:
+                  System.out.println("Ficou em primeiro lugar!");
+                  break;
+              case 2:
+                  System.out.println("Ficou em segundo lugar!");
+                  break;
+              case 3:
+                  System.out.println("Ficou em terceiro lugar!");
+                  break;
+              case 4:
+                  System.out.println("Ficou em quarto lugar!");
+                  break;
+              default:
+                  System.out.println("Você perdeu, tente de novo!");
+                  break;
+          }
+      }
+  }
+
+  Saída esperada:
+  --------------
+  Ficou em primeiro lugar!
+  --------------
+
+Classe: Aula_22C
+-------------------------------
+- Objetivo: Implementar uma calculadora simples usando a estrutura `switch-case`.
+- O que faz:
+  - Solicita dois valores e uma operação (+, -, *, /) ao usuário.
+  - Realiza a operação correspondente e exibe o resultado.
+
+  Código:
+  package Java.Aula_22;
+
+  import java.util.Scanner;
+
+  public class Aula_22C {
+      public static void main(String[] args) {
+          String operador;
+          int n1 = 0, n2 = 0, res = 0;
+          Scanner scan = new Scanner(System.in);
+
+          System.out.printf("Digite o primeiro valor: ");
+          n1 = scan.nextInt();
+
+          System.out.printf("Digite o segundo valor: ");
+          n2 = scan.nextInt();
+
+          System.out.println("Qual operação deseja fazer? :");
+          System.out.println("Adição [+]| Subtração [-]| Divisão [/]| Multiplicação[*]");
+          operador = scan.next();
+
+          switch (operador) {
+              case "+":
+                  res = n1 + n2;
+                  break;
+              case "-":
+                  res = n1 - n2;
+                  break;
+              case "/":
+                  res = n1 / n2;
+                  break;
+              case "*":
+                  res = n1 * n2;
+                  break;
+              default:
+                  System.out.println("Operador invalido!");
+                  break;
+          }
+          System.out.printf("Operação: %s | Resultado: %d", operador, res);
+      }
+  }
+
+  Saída esperada:
+  --------------
+  Digite o primeiro valor: 10
+  Digite o segundo valor: 5
+  Qual operação deseja fazer? :
+  Adição [+]| Subtração [-]| Divisão [/]| Multiplicação[*]
+  +
+  Operação: + | Resultado: 15
+  --------------
+
+Classe: Aula_22D
+-------------------------------
+- Objetivo: Demonstrar o uso de `switch-case` para verificar a situação de um aluno com base em sua nota.
+- O que faz:
+  - Solicita a nota de uma prova ao usuário.
+  - Usa `switch-case` para determinar se o aluno foi aprovado, está em recuperação ou foi reprovado.
+
+  Código:
+  package Java.Aula_22;
+
+  import java.util.Scanner;
+
+  public class Aula_22D {
+      public static void main(String[] args) {
+          Scanner scan = new Scanner(System.in);
+          int prova[] = new int[3];
+
+          System.out.println("--------Programa de Médias---------");
+
+          for (int i = 0; i < prova.length; i++) {
+              System.out.println("Digite a 1° nota: ");
+              prova[i] = scan.nextInt();
+              break;
+          }
+
+          switch (prova[0]) {
+              case 10:
+              case 9:
+              case 8:
+              case 7:
+                  System.out.println("Aprovado");
+                  break;
+              case 6:
+              case 5:
+              case 4:
+                  System.out.println("Recuperação");
+                  break;
+              default:
+                  System.out.println("Reprovado");
+                  break;
+          }
+      }
+  }
+
+  Saída esperada:
+  --------------
+  --------Programa de Médias---------
+  Digite a 1° nota: 
+  8
+  Aprovado
+  --------------
+
+===============================
+          Explicação
+===============================
+
+1. **Estruturas Condicionais**:
+   - `if-else`: Usada na classe `Aula_22A` para verificar múltiplas condições.
+   - `switch-case`: Usada nas classes `Aula_22B`, `Aula_22C` e `Aula_22D` para simplificar a verificação de valores específicos.
+
+2. **Interação com o Usuário**:
+   - As classes `Aula_22C` e `Aula_22D` solicitam entradas do usuário e realizam operações com base nelas.
+
+3. **Uso de `switch-case`**:
+   - Na classe `Aula_22B`, é usado para verificar a posição de um competidor.
+   - Na classe `Aula_22C`, é usado para realizar operações matemáticas.
+   - Na classe `Aula_22D`, é usado para verificar a situação de um aluno com base em sua nota.
+
+===============================
+          Resumo
+===============================
+
+- **Condicionais**: `if-else` e `switch-case` são usados para tomar decisões com base em condições.
+- **Interatividade**: As classes interagem com o usuário para coletar dados e fornecer resultados.
+- **Flexibilidade**: `switch-case` é ideal para verificar múltiplos valores de forma organizada.
+
+===============================
+          Fim
+===============================

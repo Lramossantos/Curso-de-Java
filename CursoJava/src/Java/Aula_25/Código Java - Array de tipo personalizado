@@ -1,0 +1,178 @@
+===============================
+          Aula 25
+===============================
+
+Classe: Aula_25A
+-------------------------------
+- Objetivo: Demonstrar como criar e manipular um array de tipo personalizado (Carro).
+- O que faz:
+  - Cria um array de objetos da classe `Carro`.
+  - Inicializa o array com modelos de carros.
+  - Exibe o status de cada carro usando o método `status()`.
+
+  Código:
+  package Java.Aula_25;
+
+  public class Aula_25A {
+      public static void main(String[] args) {
+          final int nomeCarros = 5;
+          Carro[] carros = new Carro[5];
+          String modeloCarros[] = { "HRV", "Golf", "Camaro", "Mustang", "Toro" };
+
+          // Inicializar o array carros
+          for (int i = 0; i < nomeCarros; i++) {
+              carros[i] = new Carro(modeloCarros[i]);
+          }
+
+          // Imprimir Carros
+          for (Carro c : carros) {
+              c.status();
+          }
+      }
+  }
+
+  Saída esperada:
+  ----------------------------------------
+  Nome...............: HRV
+  Ligado.............: Não
+  Destruido..........: Não
+  Blindagem..........: 0
+  Armamento..........: Não
+  ----------------------------------------
+  Nome...............: Golf
+  Ligado.............: Não
+  Destruido..........: Não
+  Blindagem..........: 0
+  Armamento..........: Não
+  ----------------------------------------
+  Nome...............: Camaro
+  Ligado.............: Não
+  Destruido..........: Não
+  Blindagem..........: 0
+  Armamento..........: Não
+  ----------------------------------------
+  Nome...............: Mustang
+  Ligado.............: Não
+  Destruido..........: Não
+  Blindagem..........: 0
+  Armamento..........: Não
+  ----------------------------------------
+  Nome...............: Toro
+  Ligado.............: Não
+  Destruido..........: Não
+  Blindagem..........: 0
+  Armamento..........: Não
+  ----------------------------------------
+
+Classe: Carro
+-------------------------------
+- Objetivo: Representar um carro com atributos como nome, estado de ligado, destruído, blindagem e armamento.
+- O que faz:
+  - Define atributos como `nome`, `ligado`, `destruido`, `blindagem` e `armamento`.
+  - Implementa métodos para acessar e modificar os atributos.
+  - Inclui métodos como `sofrerDano(int dano)` e `status()` para exibir informações do carro.
+
+  Código:
+  package Java.Aula_25;
+
+  public class Carro {
+      private String nome;
+      private boolean ligado;
+      private boolean destruido;
+      private int blindagem;
+      private boolean armamento;
+
+      public Carro(String nome) {
+          this.nome = nome;
+          this.ligado = false;
+          this.destruido = false;
+          this.blindagem = 0;
+          this.armamento = false;
+      }
+
+      public String getNome() {
+          return nome;
+      }
+
+      public void setNome(String nome) {
+          this.nome = nome;
+      }
+
+      public boolean isLigado() {
+          return ligado;
+      }
+
+      public void setLigado(boolean ligado) {
+          this.ligado = ligado;
+      }
+
+      public boolean isDestruido() {
+          return destruido;
+      }
+
+      public void setDestruido(boolean destruido) {
+          this.destruido = destruido;
+      }
+
+      public int getBlindagem() {
+          return blindagem;
+      }
+
+      public void setBlindagem(int blindagem) {
+          this.blindagem = blindagem;
+      }
+
+      public boolean isArmamento() {
+          return armamento;
+      }
+
+      public void setArmamento(boolean armamento) {
+          this.armamento = armamento;
+      }
+
+      public void sofrerDano(int dano) {
+          this.blindagem -= dano;
+          if (this.blindagem <= 0) {
+              this.blindagem = 0;
+              this.ligado = false;
+              this.destruido = true;
+          }
+      }
+
+      public void status() {
+          System.out.println("----------------------------------------");
+          System.out.printf("Nome...............:%s%n", this.nome);
+          System.out.printf("Ligado.............:%s%n", this.ligado ? "Sim" : "Não");
+          System.out.printf("Destruido..........:%s%n", this.destruido ? "Sim" : "Não");
+          System.out.printf("Blindagem..........:%s%n", this.blindagem);
+          System.out.printf("Armamento..........:%s%n", this.armamento ? "Sim" : "Não");
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Array de Tipo Personalizado**:
+   - A classe `Aula_25A` cria um array de objetos da classe `Carro`.
+   - Cada objeto `Carro` é inicializado com um modelo específico.
+
+2. **Classe Carro**:
+   - Representa um carro com atributos como nome, estado de ligado, destruído, blindagem e armamento.
+   - O método `status()` exibe todas as informações do carro.
+
+3. **Inicialização e Exibição**:
+   - O array de carros é preenchido com modelos específicos.
+   - Um loop `for-each` é usado para exibir o status de cada carro.
+
+===============================
+          Resumo
+===============================
+
+- **Arrays de Objetos**: Permitem armazenar e manipular coleções de objetos personalizados.
+- **Encapsulamento**: A classe `Carro` encapsula atributos e métodos relacionados a um carro.
+- **Reutilização de Código**: A classe `Carro` pode ser usada em outros contextos para representar carros.
+
+===============================
+          Fim
+===============================
