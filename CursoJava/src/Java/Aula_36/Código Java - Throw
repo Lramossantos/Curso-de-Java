@@ -25,6 +25,7 @@ Classe: Aula_36B
   Exception in thread "main" java.lang.IllegalArgumentException: Valor de nota inválido (se nota1 ou nota2 > 50)
   ou
   Resultado: 80 (caso os valores sejam válidos)
+  e
 
 ===============================
           Fim
