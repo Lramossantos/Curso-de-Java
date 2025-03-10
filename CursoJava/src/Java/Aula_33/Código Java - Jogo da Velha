@@ -1,0 +1,35 @@
+===============================
+          Aula 33
+===============================
+
+Classe: Aula_33A
+-------------------------------
+- **Objetivo:** Criar um jogo da velha em Java utilizando matrizes e classes.
+- **O que faz:**
+  - Inicializa um tabuleiro de jogo da velha com uma matriz 3x3.
+  - Utiliza a classe `Campo` para gerenciar os espaços do tabuleiro.
+  - Implementa a lógica de jogadas alternadas entre os jogadores 'X' e 'O'.
+  - Verifica as condições de vitória a cada jogada.
+  - Exibe o tabuleiro a cada rodada.
+  
+  **Saída esperada:**
+  - Exibição do tabuleiro atualizado a cada jogada.
+  - Mensagem indicando o vencedor quando uma linha, coluna ou diagonal for completada.
+  - Mensagem de erro caso um jogador tente jogar em uma posição já ocupada.
+
+Classe: Campo
+-------------------------------
+- **Objetivo:** Representar um espaço do tabuleiro do jogo da velha.
+- **O que faz:**
+  - Armazena o símbolo atual do espaço ('X', 'O' ou vazio).
+  - Permite a alteração do símbolo apenas se o espaço estiver vazio.
+  - Retorna o símbolo armazenado.
+
+  **Métodos principais:**
+  - `getSimbolo()`: Retorna o símbolo do espaço.
+  - `setSimbolo(char simbolo)`: Define o símbolo do espaço se estiver vazio.
+
+===============================
+          Fim
+===============================
+

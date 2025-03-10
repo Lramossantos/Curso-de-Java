@@ -1,0 +1,50 @@
+
+
+						Hierarquia de Erros e Exceções em Java
+
+		Throwable (Raiz de tudo)
+		├── Exception (Erros que podemos tratar)
+		│   ├── RuntimeException (Erros em tempo de execução)
+		│   │   ├── NullPointerException (Objeto nulo usado indevidamente)
+		│   │   ├── ClassCastException (Erro de conversão de tipo)
+		│   │   ├── IndexOutOfBoundsException (Índice fora do limite)
+		│   │   │   ├── ArrayIndexOutOfBoundsException (Erro em arrays)
+		│   │   ├── NoSuchElementException (Elemento não encontrado)
+		│   │   │   ├── InputMismatchException (Entrada inválida)
+		│   ├── IOException (Erros ao ler ou gravar arquivos)
+		│
+		├── Error (Problemas graves que não conseguimos corrigir)
+		    ├── AWTError (Erro na interface gráfica)
+		    ├── ThreadDeath (Thread encerrada inesperadamente)
+		    ├── VirtualMachineError (Erro grave na JVM)
+
+Exceptions podem ser corrigidas no código com try-catch.
+Errors geralmente significam que algo deu muito errado no sistema.
+
+
+
+						   				 Throwable  
+								  ┌──────────┴──────────┐
+							Exception                 Error   
+						(Podemos tratar)       	    (Problemas graves)   
+					        	│                          │
+						┌───────┴───────────┐       ┌──────┴─────────┐
+					RuntimeException    IOException   AWTError  VirtualMachineError  
+					│                               │
+					
+					├── NullPointerException        ├── ThreadDeath
+					  
+					├── ClassCastException
+					
+					├── IndexOutOfBoundsException  
+					│       ├── ArrayIndexOutOfBoundsException
+					  
+					├── NoSuchElementException  
+					│       ├── InputMismatchException  
+					
+					→ **Exceptions** podem ser tratadas no código usando `try-catch`.  
+					→ **Errors** indicam falhas graves do sistema e normalmente não podem ser tratados. 
+					
+					
+		OS DOIS EXEMPLOS SÃO OS MESMOS, PORE, COM DESIGNES E MODOS DIFERENTES DE MOSTRAR!!  
+

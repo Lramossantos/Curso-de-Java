@@ -1,0 +1,32 @@
+===============================
+          Aula 36
+===============================
+
+Classe: Aula_36A
+-------------------------------
+- Objetivo: Demonstrar o uso de exceções em Java.
+- O que faz:
+  - Inicializa um `ArrayList` de Strings.
+  - Adiciona três elementos ao `ArrayList`.
+  - Lança uma exceção `IllegalArgumentException` com a mensagem "Erro".
+
+  Saída:
+  Exception in thread "main" java.lang.IllegalArgumentException: Erro
+
+Classe: Aula_36B
+-------------------------------
+- Objetivo: Demonstrar a verificação de valores com exceções.
+- O que faz:
+  - Declara e inicializa duas variáveis `nota1` e `nota2`.
+  - Verifica se os valores são maiores que 50 e lança uma exceção `IllegalArgumentException` caso sejam.
+  - Calcula a soma das notas e imprime o resultado caso nenhuma exceção seja lançada.
+
+  Saída:
+  Exception in thread "main" java.lang.IllegalArgumentException: Valor de nota inválido (se nota1 ou nota2 > 50)
+  ou
+  Resultado: 80 (caso os valores sejam válidos)
+
+===============================
+          Fim
+===============================
+

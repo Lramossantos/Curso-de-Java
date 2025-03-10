@@ -1,0 +1,30 @@
+===============================
+          Aula 32
+===============================
+
+Classe: Aula_32A
+-------------------------------
+- **Objetivo:** Demonstrar o uso de matrizes em Java.
+- **O que faz:**
+  - Declara e inicializa uma matriz de inteiros com 5x5 elementos.
+  - Preenche a matriz com números aleatórios entre 0 e 99 usando `SecureRandom`.
+  - Exibe a matriz formatada no console.
+
+  **Saída:**
+  - Matriz 5x5 com números aleatórios.
+
+Classe: Aula_32B
+-------------------------------
+- **Objetivo:** Modularizar a geração e exibição de dados em uma matriz.
+- **O que faz:**
+  - Declara uma matriz 3x3 de inteiros.
+  - Utiliza um método separado (`gerarDados`) para preencher a matriz com números aleatórios.
+  - Utiliza outro método (`imprimirDados`) para exibir a matriz formatada no console.
+
+  **Saída:**
+  - Matriz 3x3 com números aleatórios.
+
+===============================
+          Fim
+===============================
+

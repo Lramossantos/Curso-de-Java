@@ -1,4 +1,4 @@
-package Java.aula_26;
+package Java.Aula_26;
 
 import java.util.Iterator;
 import java.util.Scanner;

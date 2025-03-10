@@ -1,0 +1,70 @@
+===============================
+          Aula 31
+===============================
+
+Classe: Aula_31A
+-------------------------------
+- Objetivo: Demonstrar como passar parâmetros para um programa Java usando `String[] args`.
+- O que faz:
+  - Recebe valores como argumentos na linha de comando.
+  - Soma os valores passados e exibe o resultado.
+  - Se nenhum valor for passado, exibe uma mensagem informando que não há valores para somar.
+
+  Código:
+  package Java.Aula_31;
+
+  public class Aula_31A {
+      public static void main(String[] args) {
+          int soma = 0;
+          if (args.length <= 0) {
+              System.out.printf("%s %n", "Sem valores para soma");
+          }
+
+          for (String string : args) {
+              int v = Integer.valueOf(string);
+              soma = soma + v;
+          }
+          System.out.printf("Soma dos valores: %d%n", soma);
+      }
+  }
+
+  Saída esperada:
+  --------------
+  Caso 1 (sem argumentos):
+  Sem valores para soma
+  Soma dos valores: 0
+
+  Caso 2 (com argumentos: 10 20 30):
+  Soma dos valores: 60
+  --------------
+
+===============================
+          Explicação
+===============================
+
+1. **Passagem de Parâmetros**:
+   - O método `main` recebe um array de strings (`String[] args`) como argumento.
+   - Esses argumentos são passados para o programa na linha de comando ao executá-lo.
+
+2. **Verificação de Argumentos**:
+   - O programa verifica se há argumentos passados usando `args.length`.
+   - Se nenhum argumento for passado, exibe a mensagem "Sem valores para soma".
+
+3. **Soma dos Valores**:
+   - O programa percorre os argumentos passados, converte cada um para inteiro e os soma.
+   - O resultado da soma é exibido ao final.
+
+4. **Uso de `Integer.valueOf()`**:
+   - Converte os valores de `String` para `int` para permitir a soma.
+
+===============================
+          Resumo
+===============================
+
+- **Argumentos na Linha de Comando**: Permitem passar valores para o programa ao executá-lo.
+- **Conversão de Tipos**: Os argumentos são recebidos como `String` e convertidos para `int` para realizar operações matemáticas.
+- **Verificação de Entrada**: O programa verifica se há argumentos antes de tentar processá-los.
+
+===============================
+          Fim
+===============================

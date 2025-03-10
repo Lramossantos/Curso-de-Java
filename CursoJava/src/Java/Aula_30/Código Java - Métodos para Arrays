@@ -1,0 +1,74 @@
+===============================
+          Aula 30
+===============================
+
+Classe: Aula_30A
+-------------------------------
+- **Objetivo:** Apresentar um array de inteiros em Java.
+- **O que faz:**
+  - Declara e inicializa um array de inteiros.
+  - Utiliza um loop `for-each` para percorrer e exibir os valores no console.
+
+  **Saída:**
+  - Elementos do array exibidos sequencialmente.
+
+Classe: Aula_30B
+-------------------------------
+- **Objetivo:** Ordenação de arrays em Java.
+- **O que faz:**
+  - Declara um array de inteiros desordenado.
+  - Usa `Arrays.sort()` para ordenar os valores.
+  - Exibe os valores ordenados no console.
+
+  **Saída:**
+  - Elementos do array ordenados.
+
+Classe: Aula_30C
+-------------------------------
+- **Objetivo:** Preenchimento de arrays.
+- **O que faz:**
+  - Declara um array de inteiros.
+  - Usa `Arrays.fill()` para preencher todos os elementos com um valor específico.
+  - Exibe os valores do array.
+
+  **Saída:**
+  - Array preenchido com o mesmo valor.
+
+Classe: Aula_30D
+-------------------------------
+- **Objetivo:** Copiar arrays.
+- **O que faz:**
+  - Declara dois arrays de inteiros.
+  - Usa `System.arraycopy()` para copiar elementos de um array para outro.
+  - Exibe os valores do array copiado.
+
+  **Saída:**
+  - Novo array contendo os valores copiados.
+
+Classe: Aula_30E
+-------------------------------
+- **Objetivo:** Comparação de arrays.
+- **O que faz:**
+  - Declara quatro arrays de inteiros.
+  - Usa `Arrays.equals()` para comparar se os arrays são idênticos.
+  - Exibe o resultado da comparação.
+
+  **Saída:**
+  - Indicação se os arrays são iguais ou diferentes.
+
+Classe: Aula_30F
+-------------------------------
+- **Objetivo:** Pesquisa binária em arrays.
+- **O que faz:**
+  - Declara um array de inteiros.
+  - Ordena o array usando `Arrays.sort()`.
+  - Usa `Arrays.binarySearch()` para buscar um valor específico.
+  - Exibe a posição do valor encontrado (ou indicação de que não foi encontrado).
+
+  **Saída:**
+  - Índice do valor no array ou mensagem de que o valor não está presente.
+
+===============================
+          Fim
+===============================
+

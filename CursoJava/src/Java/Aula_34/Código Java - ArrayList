@@ -1,0 +1,58 @@
+===============================
+          Aula 34
+===============================
+
+Classe: Aula_34A
+-------------------------------
+- Objetivo: Demonstrar o uso de `ArrayList` para armazenar e imprimir elementos.
+- O que faz:
+  - Cria dois `ArrayList`, um para inteiros e outro para Strings.
+  - Adiciona elementos aos arrays.
+  - Utiliza loops `for-each` para imprimir os elementos de ambos os `ArrayList`.
+
+  Saída:
+  11
+  22
+  33
+  Cruze
+  HRV
+  Polo
+
+Classe: Aula_34B
+-------------------------------
+- Objetivo: Demonstrar o uso do método `clear()` para limpar um `ArrayList`.
+- O que faz:
+  - Cria um `ArrayList` de inteiros e adiciona elementos.
+  - Usa `clear()` para remover todos os elementos do `ArrayList`.
+  - Tenta imprimir os elementos, mas o `ArrayList` estará vazio.
+
+  Saída:
+  (Nenhuma saída, pois a lista foi limpa)
+
+Classe: Aula_34C
+-------------------------------
+- Objetivo: Demonstrar o uso do método `indexOf()` para encontrar a posição de um elemento em um `ArrayList`.
+- O que faz:
+  - Cria um `ArrayList` com nomes.
+  - Utiliza `indexOf("Lucas")` para encontrar a posição do nome "Lucas".
+  - Imprime o índice correspondente.
+
+  Saída:
+  3
+
+Classe: Aula_34D
+-------------------------------
+- Objetivo: Demonstrar a remoção de elementos em um `ArrayList`.
+- O que faz:
+  - Cria um `ArrayList` de Strings e adiciona elementos.
+  - Remove elementos utilizando `remove(index)` e `remove("elemento")`.
+  - Usa `trimToSize()` para otimizar o espaço.
+  - Imprime os elementos restantes.
+
+  Saída:
+  Ricardo
+
+===============================
+          Fim
+===============================
+

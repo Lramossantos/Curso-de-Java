@@ -1,0 +1,31 @@
+===============================
+          Aula 27
+===============================
+
+Classe: Aula_27A
+-------------------------------
+- **Objetivo:** Demonstrar a manipulação de strings e arrays de caracteres.
+- **O que faz:**
+  - Converte uma string em um array de caracteres usando `toCharArray()` e exibe os caracteres individualmente.
+  - Declara e inicializa um array de caracteres manualmente.
+  - Utiliza um loop para percorrer e exibir os caracteres no console.
+
+  **Saída:**
+  - Caracteres da string exibidos separadamente.
+  - Caracteres do array exibidos sequencialmente.
+
+Classe: Aula_27B
+-------------------------------
+- **Objetivo:** Demonstrar o uso de arrays como parâmetros de métodos.
+- **O que faz:**
+  - Declara e inicializa um array de inteiros com valores pré-definidos.
+  - Passa o array para um método (`imparPar`) que verifica se cada número é par ou ímpar.
+  - Exibe o número e sua respectiva classificação (par ou ímpar) no console.
+
+  **Saída:**
+  - Cada número do array seguido da indicação "PAR" ou "ÍMPAR".
+
+===============================
+          Fim
+===============================
+

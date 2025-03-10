@@ -1,0 +1,59 @@
+===============================
+          Aula 37
+===============================
+
+Classe: Aula_37A
+-------------------------------
+- Objetivo: Demonstrar a inicialização de Strings em Java.
+- O que faz:
+  - Inicializa um array de caracteres.
+  - Cria Strings de diferentes formas, incluindo a partir do array de caracteres.
+  - Imprime os valores das Strings criadas.
+
+  Saída:
+  (Linha vazia)
+  Leonardo
+
+Classe: Aula_37B
+-------------------------------
+- Objetivo: Determinar o tamanho de uma String.
+- O que faz:
+  - Inicializa um array de caracteres.
+  - Converte o array em uma String.
+  - Utiliza `length()` para obter o tamanho da String.
+  - Exibe a String e seu comprimento.
+
+  Saída:
+  'c', 'u', 'r', 's', 'o', ' ', 'd', 'e', ' ', 'j', 'a', 'v', 'a'
+   1    2    3    4    5    6    7    8    9    10   11   12   13
+  O tamanho da String é de 13
+
+Classe: Aula_37C
+-------------------------------
+- Objetivo: Demonstrar o uso do método `charAt()`.
+- O que faz:
+  - Inicializa um array de caracteres e uma String.
+  - Utiliza `charAt(3)` para obter o caractere na posição 3.
+  - Imprime o caractere extraído e uma String.
+
+  Saída:
+  charAt: n
+  Leonardo
+
+Classe: Aula_37D
+-------------------------------
+- Objetivo: Demonstrar o uso do método `getChars()`.
+- O que faz:
+  - Inicializa um array de caracteres e uma String.
+  - Usa `length()` para determinar o tamanho da String.
+  - Utiliza `getChars(0, 3, texto_c2, 0)` para copiar parte da String para outro array de caracteres.
+  - Imprime o tamanho da String e os caracteres copiados.
+
+  Saída:
+  8
+  Leo
+
+===============================
+          Fim
+===============================
+
