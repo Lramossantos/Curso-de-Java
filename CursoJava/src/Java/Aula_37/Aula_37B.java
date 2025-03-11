@@ -1,6 +1,6 @@
 package Java.Aula_37;
 
-public class Aula_37_B {
+public class Aula_37B {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

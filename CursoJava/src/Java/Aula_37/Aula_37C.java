@@ -17,9 +17,5 @@ public class Aula_37C {
 		c = texto_s.charAt(3);
 		System.out.println("charAt: " + c);
 		System.out.println("Leonardo");
-		
-		System.out.println("Leonardo");
-
 	}
-
 }
