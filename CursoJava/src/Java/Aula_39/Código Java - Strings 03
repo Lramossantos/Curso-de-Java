@@ -1,0 +1,103 @@
+===============================
+          Aula 39
+===============================
+
+Classe: Aula_39A
+-------------------------------
+- Objetivo: Demonstrar o uso dos métodos `startsWith` e `endsWith` da classe `String`.
+- O que faz:
+  - Verifica se uma string começa ou termina com determinados caracteres.
+
+  Código:
+  package Java.Aula_39;
+
+  public class Aula_39A {
+      public static void main(String[] args) {
+          String s1 = "Java Solution - Curso de Java";
+
+          if (s1.startsWith("J")) {
+              System.out.println("Verdadeiro");
+          } else {
+              System.out.println("Falso");
+          }
+
+          if (s1.endsWith("Java")) {
+              System.out.println("Verdadeiro");
+          } else {
+              System.out.println("Falso");
+          }
+      }
+  }
+
+Classe: Aula_39B
+-------------------------------
+- Objetivo: Demonstrar o uso do método `indexOf` da classe `String`.
+- O que faz:
+  - Exibe a posição do primeiro caractere encontrado na string.
+
+  Código:
+  package Java.Aula_39;
+
+  public class Aula_39B {
+      public static void main(String[] args) {
+          String s1 = "Java Solution - Curso de Java";
+          System.out.println(s1.indexOf('J'));
+      }
+  }
+
+Classe: Aula_39C
+-------------------------------
+- Objetivo: Demonstrar o uso do método `substring` da classe `String`.
+- O que faz:
+  - Extrai uma parte da string original.
+
+  Código:
+  package Java.Aula_39;
+
+  public class Aula_39C {
+      public static void main(String[] args) {
+          String s1 = "Java Solution - Curso de Java";
+          System.out.println(s1.substring(0, 13));
+      }
+  }
+
+Classe: Aula_39D
+-------------------------------
+- Objetivo: Demonstrar o uso do método `concat` da classe `String`.
+- O que faz:
+  - Concatena duas strings.
+
+  Código:
+  package Java.Aula_39;
+
+  public class Aula_39D {
+      public static void main(String[] args) {
+          String s1 = "Java Solution - Curso de Java - ";
+          String s2 = "github.com/lramossantos/cursodejava";
+
+          System.out.println(s1.concat(s2));
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Verificação de Início e Fim**:
+   - O método `startsWith()` verifica se a string começa com o caractere especificado.
+   - O método `endsWith()` verifica se a string termina com o caractere especificado.
+
+2. **Índice de Caractere**:
+   - O método `indexOf()` retorna a posição do primeiro ocorrência do caractere especificado na string.
+
+3. **Extração de Substring**:
+   - O método `substring()` extrai uma parte da string, especificando o índice inicial e final.
+
+4. **Concatenação de Strings**:
+   - O método `concat()` une duas strings, formando uma nova string.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando os métodos `main` das classes são executados, a saída será:

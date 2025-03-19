@@ -1,0 +1,129 @@
+===============================
+          Aula 38
+===============================
+
+Classe: Aula_38A
+-------------------------------
+- Objetivo: Comparar strings utilizando `==` e `equals()`.
+- O que faz:
+  - Demonstra a diferença entre a comparação de referências e a comparação de conteúdo.
+
+  Código:
+  package Java.Aula_38;
+
+  public class Aula_38A {
+      public static void main(String[] args) {
+          String s1 = new String("Leonardo");
+          String s2 = "Leonardo";
+
+          // ==
+          if (s1 == s2) {
+              System.out.println("True");
+          } else {
+              System.out.println("False");
+          }
+
+          // equals(?)
+          if (s1.equals(s2)) {
+              System.out.println("True");
+          } else {
+              System.out.println("False");
+          }
+      }
+  }
+
+Classe: Aula_38B
+-------------------------------
+- Objetivo: Usar o método `equalsIgnoreCase`.
+- O que faz:
+  - Compara duas strings ignorando diferenças entre maiúsculas e minúsculas.
+
+  Código:
+  package Java.Aula_38;
+
+  public class Aula_38B {
+      public static void main(String[] args) {
+          String s1 = new String("Leonardo");
+          String s2 = "Leonardo";
+
+          if (s1.equalsIgnoreCase(s2)) {
+              System.out.println("True");
+          } else {
+              System.out.println("False");
+          }
+      }
+  }
+
+Classe: Aula_38C
+-------------------------------
+- Objetivo: Usar o método `compareTo`.
+- O que faz:
+  - Compara duas strings lexicograficamente.
+
+  Código:
+  package Java.Aula_38;
+
+  public class Aula_38C {
+      public static void main(String[] args) {
+          String s1 = new String("Leonardo");
+          String s2 = "Leonardo";
+          String s3 = "Curso de Java";
+
+          System.out.println(s2);
+
+          int res = s3.compareTo(s1);
+          if (res == 0) {
+              System.out.println("s3 é igual a s1");
+          } else if (res < 0) {
+              System.out.println("s3 é menor que s1, por favor digite mais!");
+          } else if (res > 0) {
+              System.out.println("s3 é maior que s1, por favor digite menos!");
+          }
+      }
+  }
+
+Classe: Aula_38D
+-------------------------------
+- Objetivo: Usar o método `regionMatches`.
+- O que faz:
+  - Compara uma parte de duas strings.
+
+  Código:
+  package Java.Aula_38;
+
+  public class Aula_38D {
+      public static void main(String[] args) {
+          String s4 = "leonardo.tech2024@gmail.com";
+          String s5 = "leonardoramosdossantos92@gmail.com";
+
+          System.out.println(s4.regionMatches(true, 0, s5, 0, 8) ? "s4 é igual a s5" : "s4 é diferente de s5");
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Comparação de Referências vs Conteúdo**:
+   - O operador `==` compara referências de objetos, enquanto o método `equals()` compara o conteúdo das strings.
+
+2. **Comparação Ignorando Maiúsculas**:
+   - O método `equalsIgnoreCase()` permite comparar strings sem se preocupar com a capitalização.
+
+3. **Comparação Lexicográfica**:
+   - O método `compareTo()` compara strings lexicograficamente, retornando um valor negativo, zero ou positivo.
+
+4. **Comparação de Regiões**:
+   - O método `regionMatches()` compara partes específicas de duas strings, podendo ser sensível ou não a maiúsculas.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando os métodos `main` das classes são executados, a saída será:
+
+False
+True
+Leonardo
+s3 é maior que s1, por favor digite menos!
+s4 é diferente de s5

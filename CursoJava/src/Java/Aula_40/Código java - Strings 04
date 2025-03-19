@@ -1,0 +1,135 @@
+===============================
+          Aula 40
+===============================
+
+Classe: Aula_40A
+-------------------------------
+- Objetivo: Demonstrar o uso de métodos da classe `String` em Java, como `concat`, `replace`, `toLowerCase` e `toUpperCase`.
+- O que faz:
+  - Concatena duas strings.
+  - Substitui caracteres em uma string.
+  - Exibe a string original e a modificada.
+
+  Código:
+  package Java.Aula_40;
+
+  public class Aula_40A {
+      public static void main(String[] args) {
+          String s1 = "Java Solutions - Curso de Java - ";
+          String s2 = "youtube.com/javasolutions";
+          String s3 = s1.concat(s2);
+          String s4;
+
+          System.out.println(s3);
+          s4 = s3.replace('a', '#');
+          System.out.println(s4);
+      }
+  }
+
+Classe: Aula_40B
+-------------------------------
+- Objetivo: Continuar a demonstração dos métodos da classe `String`, focando em `toLowerCase` e `toUpperCase`.
+- O que faz:
+  - Concatena strings e exibe suas versões em minúsculas e maiúsculas.
+
+  Código:
+  package Java.Aula_40;
+
+  public class Aula_40B {
+      public static void main(String[] args) {
+          String s1 = "Java Solutions - Curso de Java - ";
+          String s2 = "youtube.com/javasolutions";
+          String s3 = s1.concat(s2);
+
+          System.out.println(s3);
+          System.out.println(s3.toLowerCase());
+          System.out.println(s3.toUpperCase());
+      }
+  }
+
+Classe: Aula_40C
+-------------------------------
+- Objetivo: Demonstrar o uso do método `trim` da classe `String`.
+- O que faz:
+  - Remove espaços em branco do início e do fim da string concatenada.
+
+  Código:
+  package Java.Aula_40;
+
+  public class Aula_40C {
+      public static void main(String[] args) {
+          String s1 = "Java Solutions - Curso de Java - ";
+          String s2 = "youtube.com/javasolutions";
+          String s3 = s1.concat(s2);
+
+          System.out.println(s3.trim());
+      }
+  }
+
+Classe: Aula_40D
+-------------------------------
+- Objetivo: Demonstrar o uso do método `toCharArray` para converter uma string em um array de caracteres.
+- O que faz:
+  - Converte a string concatenada em um array de caracteres.
+
+  Código:
+  package Java.Aula_40;
+
+  public class Aula_40D {
+      public static void main(String[] args) {
+          String s1 = "Java Solutions - Curso de Java - ";
+          String s2 = "youtube.com/javasolutions";
+          String s3 = s1.concat(s2);
+
+          char[] c = s3.toCharArray();
+      }
+  }
+
+Classe: Aula_40E
+-------------------------------
+- Objetivo: Demonstrar o uso do método `split` para dividir uma string em partes.
+- O que faz:
+  - Divide a string concatenada em um array de strings, usando espaço como delimitador.
+
+  Código:
+  package Java.Aula_40;
+
+  public class Aula_40E {
+      public static void main(String[] args) {
+          String s1 = "Java Solutions - Curso de Java - ";
+          String s2 = "youtube.com/javasolutions";
+          String s3 = s1.concat(s2);
+          
+          String[] link = s3.split(" ");
+          System.out.println(s3);
+          for (String ancora : link) {
+              System.out.println(ancora);
+          }
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Concatenação de Strings**:
+   - O método `concat()` é usado para unir duas strings, criando uma nova string.
+
+2. **Substituição de Caracteres**:
+   - O método `replace()` permite substituir caracteres específicos em uma string.
+
+3. **Transformação de Caso**:
+   - Os métodos `toLowerCase()` e `toUpperCase()` convertem a string para minúsculas e maiúsculas, respectivamente.
+
+4. **Remoção de Espaços**:
+   - O método `trim()` remove espaços em branco do início e do fim da string.
+
+5. **Conversão para Array de Caracteres**:
+   - O método `toCharArray()` converte a string em um array de caracteres para facilitar a manipulação.
+
+6. **Divisão de Strings**:
+   - O método `split()` divide a string em partes, com base em um delimitador (neste caso, um espaço).
+
+===============================
+          Fim
+===============================
