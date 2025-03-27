@@ -1,0 +1,96 @@
+===============================
+          Aula 42
+===============================
+
+Classe: Aula_42A
+-------------------------------
+- Objetivo: Mostrar como ler um arquivo de texto e exibir seu conteúdo em Java.
+- O que faz:
+  - Lê todas as linhas de um arquivo de texto e imprime cada linha no console.
+
+  Código:
+  package Java.Aula_42;
+
+  import java.io.IOException; // Importa a classe IOException para tratar erros de entrada/saída
+  import java.nio.file.Files; // Importa a classe Files para manipulação de arquivos
+  import java.nio.file.Path; // Importa a classe Path para representar caminhos de arquivos
+  import java.nio.file.Paths; // Importa a classe Paths para criar caminhos
+  import java.util.List; // Importa a classe List para trabalhar com listas de strings
+
+  public class Aula_42A {
+      public static void main(String[] args) {
+          // Define o caminho do arquivo de texto
+          Path arquivo = Paths.get("C:/Users/User/Documentos/text.txt");
+
+          try {
+              // Lê todas as linhas do arquivo e armazena em uma lista
+              List<String> linhas = Files.readAllLines(arquivo);
+              
+              // Imprime cada linha do arquivo
+              for (String string : linhas) {
+                  System.out.println(string);
+              }
+          } catch (IOException e) {
+              // Se ocorrer um erro, exibe uma mensagem de erro
+              System.out.println("ERRO");
+          }
+      }
+  }
+
+Classe: Aula_42B
+-------------------------------
+- Objetivo: Continuar a demonstração de leitura de arquivos de texto.
+- O que faz:
+  - Lê um arquivo de texto e imprime seu conteúdo usando uma abordagem diferente (expressão lambda).
+
+  Código:
+  package Java.Aula_42;
+
+  import java.io.IOException; // Importa a classe IOException
+  import java.nio.file.Files; // Importa a classe Files
+  import java.nio.file.Path; // Importa a classe Path
+  import java.nio.file.Paths; // Importa a classe Paths
+  import java.util.List; // Importa a classe List
+
+  public class Aula_42B {
+      public static void main(String[] args) {
+          // Define o caminho do arquivo de texto
+          Path arquivo = Paths.get("C:/Users/User/Documentos/text.txt");
+          try {
+              // Lê todas as linhas do arquivo e armazena em uma lista
+              List<String> linhas = Files.readAllLines(arquivo);
+              // Imprime cada linha do arquivo utilizando uma expressão lambda
+              linhas.forEach(linha -> System.out.println(linha));
+          } catch (IOException e) {
+              // Se ocorrer um erro, exibe uma mensagem de erro
+              System.out.println("ERRO");
+          }
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **O que são arquivos de texto**:
+   - Arquivos de texto são documentos que contêm dados em formato legível, como notas, configurações, ou qualquer tipo de informação textual. No nosso exemplo, estamos lidando com um arquivo chamado "text.txt".
+
+2. **Classes Utilizadas**:
+   - **Path**: Representa um caminho para um arquivo ou diretório. Usamos para especificar a localização do arquivo no computador.
+   - **Files**: Contém métodos para ler e escrever arquivos. Usamos para executar operações sobre os arquivos.
+   - **List**: Uma coleção que armazena várias linhas do arquivo. Cada linha do arquivo será um elemento dessa lista.
+
+3. **Como o código funciona**:
+   - Primeiro, definimos o caminho do arquivo de texto.
+   - Usamos `Files.readAllLines()` para ler todas as linhas do arquivo de texto e armazená-las em uma lista.
+   - No `Aula_42A`, usamos um loop `for` para imprimir cada linha.
+   - No `Aula_42B`, utilizamos uma expressão lambda com `forEach` para fazer a mesma coisa de uma forma mais concisa.
+   - Se houver um erro ao tentar ler o arquivo (por exemplo, se o arquivo não existir), uma mensagem de erro será exibida.
+
+===============================
+          Saída Esperada
+===============================
+
+- Se o arquivo "text.txt" existir e contiver texto, a saída será o conteúdo do arquivo impresso linha por linha no console.
+
+- Se houver um erro durante a leitura do arquivo, a saída será:

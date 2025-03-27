@@ -1,0 +1,70 @@
+===============================
+          Aula 45
+===============================
+
+Classe: Aula_45A
+-------------------------------
+- Objetivo: Demonstrar o uso de `Queue` e `LinkedList` para gerenciar uma fila em Java.
+- O que faz:
+  - Cria uma fila de carros e exibe o carro no topo da fila, além do estado da fila.
+
+  Código:
+  package Java.Aula_45;
+
+  import java.util.LinkedList;
+  import java.util.Queue;
+
+  public class Aula_45A {
+      public static void main(String[] args) {
+          Queue<String> carros = new LinkedList<>();
+
+          carros.add("HRV");
+          carros.add("Golf");
+          carros.add("Polo");
+          carros.add("Camaro");
+          carros.add("Tiggo 3X");
+
+          System.out.println("Topo da fila: " + carros.peek());
+          System.out.println(carros);
+          System.out.println(carros.isEmpty() ? "Fila vazia" : "Fila com elementos!");
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Uso de Queue**:
+   - `Queue` é uma interface que representa uma coleção ordenada de elementos que segue a ordem FIFO (First In, First Out).
+
+2. **Implementação com LinkedList**:
+   - `LinkedList` é uma implementação comum de `Queue`, permitindo adicionar e remover elementos da fila.
+
+3. **Métodos Utilizados**:
+   - `add()`: Adiciona um elemento ao final da fila.
+   - `peek()`: Retorna o elemento no topo da fila sem removê-lo.
+   - `isEmpty()`: Verifica se a fila está vazia.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando o método `main` da classe é executado, a saída será:
+Topo da fila: HRV
+[HRV, Golf, Polo, Camaro, Tiggo 3X]
+Fila com elementos!
+
+
+
+
+
+===============================
+          Resumo
+===============================
+
+- **Manipulação de Filas**: O exemplo demonstra como utilizar `Queue` e `LinkedList` para gerenciar uma fila de elementos em Java.
+- **Operações em Filas**: Exibe como acessar o elemento no topo da fila e verificar o estado da fila.
+
+===============================
+          Fim
+===============================

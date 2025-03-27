@@ -1,0 +1,138 @@
+===============================
+          Aula 44
+===============================
+
+Classe: Aula_44A
+-------------------------------
+- Objetivo: Demonstrar o uso de `Stack` para gerenciar uma pilha em Java.
+- O que faz:
+  - Cria uma pilha de carros e exibe o carro no topo da pilha.
+
+  Código:
+  package Java.Aula_44;
+
+  import java.util.Stack;
+
+  public class Aula_44A {
+      public static void main(String[] args) {
+          Stack<String> pilha = new Stack<>();
+          pilha.push("HRV");
+          pilha.push("Golf");
+          pilha.push("Polo");
+          pilha.push("Camaro");
+          pilha.push("Tiggo 3X");
+          
+          System.out.println("Topo da pilha: " + pilha.peek());
+          
+          for (String string : pilha) {
+              System.out.println(string);
+          }
+      }
+  }
+
+Classe: Aula_44B
+-------------------------------
+- Objetivo: Continuar a demonstração do uso de `Stack`.
+- O que faz:
+  - Cria uma pilha de carros, remove o carro do topo e exibe a pilha restante.
+
+  Código:
+  package Java.Aula_44;
+
+  import java.util.Stack;
+
+  public class Aula_44B {
+      public static void main(String[] args) {
+          Stack<String> carro = new Stack<>();
+          carro.push("HRV");
+          carro.push("Golf");
+          carro.push("Polo");
+          carro.push("Camaro");
+          carro.push("Tiggo 3X");
+
+          System.out.println("Topo da pilha: " + carro.pop());
+          System.out.println(carro);
+      }
+  }
+
+Classe: Aula_44C
+-------------------------------
+- Objetivo: Continuar a demonstração do uso de `Stack`.
+- O que faz:
+  - Cria uma pilha de carros, exibe o topo, limpa a pilha e verifica se está vazia.
+
+  Código:
+  package Java.Aula_44;
+
+  import java.util.Stack;
+
+  public class Aula_44C {
+      public static void main(String[] args) {
+          Stack<String> carro = new Stack<>();
+          carro.push("HRV");
+          carro.push("Golf");
+          carro.push("Polo");
+          carro.push("Camaro");
+          carro.push("Tiggo 3X");
+
+          System.out.println("Topo da Pilha: " + carro.peek());
+          System.out.println(carro);
+          carro.clear();
+          System.out.println(carro.empty() ? "Pilha Vazia" : "Pilha com Elemento");
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Uso de Stack**:
+   - `Stack` é uma coleção que segue a ordem LIFO (Last In, First Out), onde o último elemento adicionado é o primeiro a ser removido.
+
+2. **Métodos Utilizados**:
+   - `push()`: Adiciona um elemento ao topo da pilha.
+   - `peek()`: Retorna o elemento no topo da pilha sem removê-lo.
+   - `pop()`: Remove e retorna o elemento do topo da pilha.
+   - `clear()`: Remove todos os elementos da pilha.
+   - `empty()`: Verifica se a pilha está vazia.
+
+===============================
+          Saída Esperada
+===============================
+
+Para `Aula_44A`, quando o método `main` é executado, a saída será:
+Topo da pilha: Tiggo 3X
+Tiggo 3X
+Camaro
+Polo
+Golf
+HRV
+
+
+
+
+Para `Aula_44B`, a saída será:
+Topo da pilha: Tiggo 3X
+[HRV, Golf, Polo, Camaro]
+
+
+
+
+Para `Aula_44C`, a saída será:
+Topo da Pilha: Tiggo 3X
+[HRV, Golf, Polo, Camaro, Tiggo 3X]
+Pilha Vazia
+
+
+
+
+===============================
+          Resumo
+===============================
+
+- **Manipulação de Pilhas**: Os exemplos mostram como utilizar `Stack` para gerenciar uma coleção de elementos em Java.
+- **Operações em Pilhas**: Demonstra como acessar, remover e limpar elementos de uma pilha.
+
+===============================
+          Fim
+===============================

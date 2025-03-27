@@ -1,0 +1,57 @@
+===============================
+          Aula 48
+===============================
+
+Classe: Aula_48A
+-------------------------------
+- Objetivo: Demonstrar o uso de `ArrayList` e `Iterator` para manipulação de listas em Java.
+- O que faz:
+  - Cria uma lista de times de futebol.
+  - Remove um time da lista utilizando um `Iterator`.
+
+  Código:
+  package Java.Aula_48;
+
+  import java.util.ArrayList;
+  import java.util.Iterator;
+
+  public class Aula_48A {
+      public static void main(String[] args) {
+          ArrayList<String> times = new ArrayList<String>();
+          times.add("Palmeiras");
+          times.add("Corinthians");
+          times.add("São Paulo");
+          times.add("Santos");
+          times.add("Bragantino");
+
+          System.out.println(times);
+
+          Iterator<String> it = times.iterator();
+          while (it.hasNext()) {
+              String c = it.next();
+              if (c.equals("Palmeiras")) { // Correção na comparação de strings
+                  it.remove();
+              }
+          }        
+          System.out.println(times);
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Uso de ArrayList**:
+   - `ArrayList` é uma coleção que permite armazenar elementos de forma dinâmica.
+
+2. **Uso de Iterator**:
+   - O `Iterator` permite percorrer a lista e modificar a coleção de forma segura enquanto itera.
+
+3. **Comparação de Strings**:
+   - Para comparar strings, utiliza-se o método `equals()` em vez do operador `==`, que compara referências.
+
+===============================
+          Saída Esperada
+===============================
+
+Quando o método `main` da classe é executado, a saída será:

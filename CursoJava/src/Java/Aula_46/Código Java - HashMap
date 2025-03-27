@@ -1,0 +1,103 @@
+===============================
+          Aula 46
+===============================
+
+Classe: Aula_46A
+-------------------------------
+- Objetivo: Demonstrar o uso de `HashMap` para armazenar pares chave-valor em Java.
+- O que faz:
+  - Cria um mapa de carros com IDs como chaves e nomes como valores.
+  - Exibe todos os carros armazenados.
+
+  Código:
+  package Java.Aula_46;
+
+  import java.util.HashMap;
+
+  public class Aula_46A {
+      public static void main(String[] args) {
+          HashMap<Integer, String> carros = new HashMap<Integer, String>();
+          carros.put(1, "Polo");
+          carros.put(2, "HRV");
+          carros.put(3, "Golf");
+          carros.put(4, "Camaro");
+          carros.put(5, "Mustang");
+          carros.put(6, "Cruze");
+
+          System.out.println(carros);
+          
+          for (int i = 1; i <= carros.size(); i++) {
+              System.out.println(carros.get(i));
+          }
+      }
+  }
+
+Classe: Aula_46B
+-------------------------------
+- Objetivo: Continuar a demonstração do uso de `HashMap`.
+- O que faz:
+  - Cria um mapa de times de futebol, remove um time e limpa o mapa.
+
+  Código:
+  package Java.Aula_46;
+
+  import java.util.HashMap;
+
+  public class Aula_46B {
+      public static void main(String[] args) {
+          HashMap<Integer, String> times = new HashMap<Integer, String>();
+          times.put(1, "S.E.Palmeiras");
+          times.put(2, "SPFC");
+          times.put(3, "S.C.Corinthians");
+          times.put(4, "Santos.F.C.");
+
+          times.remove(3);
+          times.clear();
+
+          for (String c : times.values()) {
+              System.out.println(c);
+          }
+      }
+  }
+
+===============================
+          Explicação
+===============================
+
+1. **Uso de HashMap**:
+   - `HashMap` é uma coleção que armazena pares chave-valor, permitindo acesso rápido aos valores através das chaves.
+
+2. **Operações com HashMap**:
+   - O método `put()` adiciona pares chave-valor.
+   - O método `remove()` remove um par pelo valor da chave.
+   - O método `clear()` remove todos os pares do mapa.
+
+===============================
+          Saída Esperada
+===============================
+
+Para `Aula_46A`, quando o método `main` é executado, a saída será algo como:
+{1=Polo, 2=HRV, 3=Golf, 4=Camaro, 5=Mustang, 6=Cruze}
+Polo
+HRV
+Golf
+Camaro
+Mustang
+Cruze
+
+
+
+
+
+Para `Aula_46B`, a saída será vazia, pois todos os elementos foram removidos com `clear()`.
+
+===============================
+          Resumo
+===============================
+
+- **Manipulação de Mapas**: Os exemplos mostram como utilizar `HashMap` para gerenciar pares chave-valor em Java.
+- **Remoção e Limpeza**: Demonstra como remover elementos específicos ou limpar completamente um mapa.
+
+===============================
+          Fim
+===============================
