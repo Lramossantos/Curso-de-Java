@@ -28,6 +28,7 @@ Classe: Aula_49A
           num.add(4);
           num.add(5);
           num.add(6);
+          
 
           Consumer<Integer> dobrar = (n) -> {
               dobro.add(n * 2);
